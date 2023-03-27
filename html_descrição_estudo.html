@@ -5,29 +5,72 @@ Objetivos:
 Aprender a usar o HTML e CSS
 Construir uma pagina com html e css
 
-Em primeiro lugar crie um arquivo chamado index.html e abrir ele no chrome da seguinte forma
-Naveguei até o arquivo, botão direito do mouse, abrir com, e escolhi o chrome
+Em primeiro lugar crie um arquivo chamado index.html e abrir ele no chrome da seguinte forma:
+Naveguei até o arquivo, botão direito do mouse, abrir com, e escolhi o chrome para abri-lo
 ou
+pelo terminal naveguei até a pasta que esta o documento e usei o comando:
+google-chrome nome_doc
+exemplo:
 william@william-ThinkPad-E470:~/workspace/HTML-CSS/html$ google-chrome index.html
 
-                                        <!DOCTYPE html>
 
-Este comando serve para dizer ao navegador que este documento se trata de um documento
-do tipo html5
-exemplo abaixo:
+                                            tag
+
+É um elemento usado para definir e estruturar o conteúdo de uma página da web
+Ela é composta pelo símbolos  de de menor "<" e maior ">" e dentro delas são escritos
+por assim dizer sua função, ou seja, o que ela faz para que serve a tag
+
+As tags defini a estrutura e o layout de uma página da web, bem como para formatar e exibir
+seu conteúdo. Elas podem ser usadas para criar links, tabelas, listas, imagens, vídeos,
+áudio, formulários e muitos outros elementos que podem ser exibidos em uma página da web.
+
+Além disso, as tags podem ter atributos que adicionam funcionalidades adicionais a elas,
+como especificar cores, tamanhos e outros estilos para as tags de texto, ou especificar a
+localização de um arquivo de imagem para a tag de imagem. Os atributos são colocados dentro
+da tag e são definidos com o sinal de igual (=) seguido pelo valor do atributo entre aspas.
+
+                            tag/declaração <!DOCTYPE html>
+
+DOCTYPE é uma declaração por assim dizer, e é a primeira frase escrita no doc html
+É uma instrução para o navegador ou interpretador indicando a versão do HTML utilizada no
+documento
+A exclamação antes de DOCTYPE é utilizada para indicar que esta é uma declaração especial de
+instrução para o navegador, e não uma tag HTML comum
+Ela não possui tag de fechamento, sendo uma exceção na sintaxe HTML.
+
+
                              
-                                      <html>... </html> 
+                            tag de elemento HTML -> <html>... </html> 
 
-<html> isto é a tag de abertura o documento html 
+Essa tag é chamada de tag de elemento HTML (ou HTML element tag, em inglês), e é usada para
+delimitar o início e o fim do documento HTML
+É praticamente a 2º tag escrita no documento
+Ela contém todo o conteúdo HTML, como o cabeçalho, o corpo e outros elementos HTML
+
+<html> isso abre o documento html 
 ... os três pontos represento o conteúdo da pagina html que é escrita aqui
-</html> isto é a tag que fecha o html, perceba que tem uma barra para direita antes da
-palavra html
+</html> isto fecha o html, perceba que tem uma barra para direita antes da palavra html
 
 Resumindo:
 Isto <html> ... </html> é o elemento html e no meio é onde fica o conteúdo que sera 
-apresentado na pagina, tudo que vermos na pagina está entre esses elementos
- 
+apresentado na pagina, tudo que vermos na pagina está escrito entre esses elementos
 
-                         Informando a lingua de uso no html
+
+
+                         Informando o idioma no html
+Para indicar o idioma que será usado no html usa-se:
+  o atributo -> lang, sinal de igual = e entre aspas duplas, as siglas do idioma -> "pt-BR"
+  isso ja no incio do documento dentro da tag elemento
+exemplo:
+<html lang="ptb-BR"
+
+Perceba que o valor do atributo deve ser o código de idioma de duas letras, como por
+exemplo:
+"pt-BR" para o brasil, "en-US" para o Estados Unidos etc..
+
+A utilização correta do atributo "lang" pode ser importante para que navegadores e
+ferramentas de acessibilidade possam adequar a apresentação do conteúdo para o usuário
+
+                                      tag head
 
 -->
