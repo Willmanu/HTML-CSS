@@ -247,12 +247,41 @@ Acima tenho a linha <title>Minha pagina</title> dentro do body
 Quando rodei meu código a minha pagina não exibiu o titulo, porque a tag <title> é usada para
 criar o titulo da aba da pagina e não o titulo do corpo da pagina
 
-
+Para criar o titulo dentro do corpo da pagina, preciso usar a tag head, ou seja, criar um
+cabeçalho e usar
 Dentro do body, ou seja, do corpo da pagina posso escrever um elemento head, ou seja,
-um cabeçalho
+um cabeçalho com uma tag h1
 Exemplo:
 
+<!DOCTYPE html>
+<html lang="ptb-BR">
+	<head>
+		<meta charset="utf-8">
+		<title>Minha pagina</title>
+	</head>
+
+	<body>
+		<head>
+			<h1>Usando head e h1, fiz o Titulo Minha pagina</h1>
+		</head>
+
+		<p>Este p é um paragrafo da Minha pagina</p>
+
+		<footer>
+			<p>Aqui é o footer(rodapé) - Pagina feita por Will</p>
+		</footer>
+	</body>
+</html>
 
 
+O que surgiu na minha pagina com essa estrutura foi:
 
--->
+1º Meu titulo ->               Usando head e h1, fiz o Titulo Minha pagina
+
+2º Paragrafo com meus texto -> Este p é um paragrafo da Minha pagina
+
+3º Rodapé                   -> Aqui é o footer(rodapé) - Pagina feita por Will
+
+                            tags h1, h2, h3, h4, h5, h6
+
+</html>
