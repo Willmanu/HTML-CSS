@@ -1,287 +1,321 @@
 <!--
-                               Introdução ao HTML5 e CSS3
-
-Objetivos:
-Aprender a usar o HTML e CSS
-Construir uma pagina com html e css
-
-Em primeiro lugar crie um arquivo chamado index.html e abrir ele no chrome da seguinte forma:
-Naveguei até o arquivo, botão direito do mouse, abrir com, e escolhi o chrome para abri-lo
-ou
-pelo terminal naveguei até a pasta que esta o documento e usei o comando:
-google-chrome nome_doc
-exemplo:
-william@william-ThinkPad-E470:~/workspace/HTML-CSS/html$ google-chrome index.html
-
-                    As principais tag no HTML5 para inicio de projeto
-
-                                            tag
-
-É um elemento usado para definir e estruturar o conteúdo de uma página da web
-Ela é composta pelo símbolos  de de menor "<" e maior ">" e dentro delas são escritos
-por assim dizer sua função, ou seja, o que ela faz para que serve a tag
-
-As tags defini a estrutura e o layout de uma página da web, bem como para formatar e exibir
-seu conteúdo. Elas podem ser usadas para criar links, tabelas, listas, imagens, vídeos,
-áudio, formulários e muitos outros elementos que podem ser exibidos em uma página da web.
-
-Além disso, as tags podem ter atributos que adicionam funcionalidades adicionais a elas,
-como especificar cores, tamanhos e outros estilos para as tags de texto, ou especificar a
-localização de um arquivo de imagem para a tag de imagem. Os atributos são colocados dentro
-da tag e são definidos com o sinal de igual (=) seguido pelo valor do atributo entre aspas.
-
-                            tag/declaração <!DOCTYPE html>
-
-DOCTYPE é uma declaração por assim dizer, e é a primeira frase escrita no doc html
-É uma instrução para o navegador ou interpretador indicando a versão do HTML utilizada no
-documento
-A exclamação antes de DOCTYPE é utilizada para indicar que esta é uma declaração especial de
-instrução para o navegador, e não uma tag HTML comum
-Ela não possui tag de fechamento, sendo uma exceção na sintaxe HTML.
-
-
-                             
-                            tag de elemento HTML -> <html>... </html> 
-
-Essa tag é chamada de tag de elemento HTML (ou HTML element tag, em inglês), e é usada para
-delimitar o início e o fim do documento HTML
-É praticamente a 2º tag escrita no documento
-Ela contém todo o conteúdo HTML, como o cabeçalho, o corpo e outros elementos HTML
-
-<html> isso abre o documento html 
-... os três pontos represento o conteúdo da pagina html que é escrita aqui
-</html> isto fecha o html, perceba que tem uma barra para direita antes da palavra html
-
-Resumindo:
-Isto <html> ... </html> é o elemento html e no meio é onde fica o conteúdo que sera 
-apresentado na pagina, tudo que vermos na pagina está escrito entre esses elementos
-
-
-
-                         Informando o idioma no html
-Para indicar o idioma que será usado no html usa-se:
-  o atributo -> lang, sinal de igual = e entre aspas duplas, as siglas do idioma -> "pt-BR"
-  isso ja no incio do documento dentro da tag elemento
-exemplo:
-<html lang="ptb-BR"
-
-Perceba que o valor do atributo deve ser o código de idioma de duas letras, como por
-exemplo:
-"pt-BR" para o brasil, "en-US" para o Estados Unidos etc..
-
-A utilização correta do atributo "lang" pode ser importante para que navegadores e
-ferramentas de acessibilidade possam adequar a apresentação do conteúdo para o usuário
-
-                                      tag head
-A palavra head significa cabeça ou cabeçalho
-No contexto do html o <head> é utilizada para definir o cabeçalho do documento HTML
-O cabeçalho contém informações sobre o documento que são lidas pelo navegador porém, não são
-exibidas na para o usuário ver
-Por exemplo: o título da página, a codificação de caracteres, palavras-chave para mecanismos
-de busca, estilos CSS, scripts JavaScript, entre outros
-
-É na seção <head> que são definidos esses metadados e recursos que serão utilizados no
-corpo do documento, delimitado pela tag <body>
-Portanto, a tag <head> é uma parte essencial do código HTML para que as páginas web possam
-ser corretamente interpretadas pelos navegadores
-
-Como exemplo especificar o charset (conjunto de caracteres ou encoding) usado para a página
-web
-exemplo:
-    <head>
-		<meta charset="utf-8">
-	</head>
-
-Isso acima indica que a página está usando o conjunto de caracteres UTF-8, que é capaz de
-representar um grande conjunto de caracteres de diferentes idiomas, incluindo caracteres
-acentuados e símbolos especiais
-Isso é importante porque garante que o navegador interprete corretamente os caracteres
-especiais usados na página, evitando erros de exibição ou codificação
-
-resumo: head aqui se monta o cabeçalho da pagina, que não é visto pelo usuário, mas sim pelo
-navegador
-Aqui tem informações sobre o documento html ajudando o mecanismo de busca a entender do que
-se trata esse documento
-
-                                 tag <title></title>
-
-Ainda dentro da seção <head></head> , o <title></title> serve para definir o titulo do
-documento que será exibido na aba do navegador ou na lista dos favoritos, e será vista pelo
-usuário
-O texto dentro da tag deve ser escrito com coerência ao que a pagina se trata, isso é de
-suma importância porque é visto pelo mecanismo de busca do navegador
-exemplo:
-   <!DOCTYPE html>
-   <html lang="ptb-BR">
-   	<head>
-   		<meta charset="utf-8">
-   		<title>Minha pagina</title>
-   	</head>
-   
-   </html>
-
-Quando abri minha pagina no navegador com f5, a pagina foi aberta no navegador com a aba
-contendo escrito → Minha pagina.
-
-                                 tag <body></body>
-
-A palavra body significa corpo
-Essa tag se trata do corpo da pagina
-Entre o inicio <body> e o fim </body> temos o conteúdo principal da pagina
-Tudo que for exibido na pagina como Texto, imagens, links e outros elementos está entre essa
-tag
-Exemplo:
-
+                                Introdução ao HTML5 e CSS3
+ 
+ Objetivos:
+ Aprender a usar o HTML e CSS
+ Construir uma pagina com html e css
+ 
+ Em primeiro lugar crie um arquivo chamado index.html e abrir ele no chrome da seguinte forma:
+ Naveguei até o arquivo, botão direito do mouse, abrir com, e escolhi o chrome para abri-lo
+ ou
+ pelo terminal naveguei até a pasta que esta o documento e usei o comando:
+ google-chrome nome_doc
+ exemplo:
+ william@william-ThinkPad-E470:~/workspace/HTML-CSS/html$ google-chrome index.html
+ 
+                     As principais tag no HTML5 para inicio de projeto
+ 
+                                             tag
+ 
+ É um elemento usado para definir e estruturar o conteúdo de uma página da web
+ Ela é composta pelo símbolos  de de menor "<" e maior ">" e dentro delas são escritos
+ por assim dizer sua função, ou seja, o que ela faz para que serve a tag
+ 
+ As tags defini a estrutura e o layout de uma página da web, bem como para formatar e exibir
+ seu conteúdo. Elas podem ser usadas para criar links, tabelas, listas, imagens, vídeos,
+ áudio, formulários e muitos outros elementos que podem ser exibidos em uma página da web.
+ 
+ Além disso, as tags podem ter atributos que adicionam funcionalidades adicionais a elas,
+ como especificar cores, tamanhos e outros estilos para as tags de texto, ou especificar a
+ localização de um arquivo de imagem para a tag de imagem. Os atributos são colocados dentro
+ da tag e são definidos com o sinal de igual (=) seguido pelo valor do atributo entre aspas.
+ 
+                             tag/declaração <!DOCTYPE html>
+ 
+ DOCTYPE é uma declaração por assim dizer, e é a primeira frase escrita no doc html
+ É uma instrução para o navegador ou interpretador indicando a versão do HTML utilizada no
+ documento
+ A exclamação antes de DOCTYPE é utilizada para indicar que esta é uma declaração especial de
+ instrução para o navegador, e não uma tag HTML comum
+ Ela não possui tag de fechamento, sendo uma exceção na sintaxe HTML.
+ 
+ 
+                              
+                             tag de elemento HTML -> <html>... </html> 
+ 
+ Essa tag é chamada de tag de elemento HTML (ou HTML element tag, em inglês), e é usada para
+ delimitar o início e o fim do documento HTML
+ É praticamente a 2º tag escrita no documento
+ Ela contém todo o conteúdo HTML, como o cabeçalho, o corpo e outros elementos HTML
+ 
+ <html> isso abre o documento html 
+ ... os três pontos represento o conteúdo da pagina html que é escrita aqui
+ </html> isto fecha o html, perceba que tem uma barra para direita antes da palavra html
+ 
+ Resumindo:
+ Isto <html> ... </html> é o elemento html e no meio é onde fica o conteúdo que sera 
+ apresentado na pagina, tudo que vermos na pagina está escrito entre esses elementos
+ 
+ 
+ 
+                          Informando o idioma no html
+ Para indicar o idioma que será usado no html usa-se:
+   o atributo -> lang, sinal de igual = e entre aspas duplas, as siglas do idioma -> "pt-BR"
+   isso ja no incio do documento dentro da tag elemento
+ exemplo:
+ <html lang="ptb-BR"
+ 
+ Perceba que o valor do atributo deve ser o código de idioma de duas letras, como por
+ exemplo:
+ "pt-BR" para o brasil, "en-US" para o Estados Unidos etc..
+ 
+ A utilização correta do atributo "lang" pode ser importante para que navegadores e
+ ferramentas de acessibilidade possam adequar a apresentação do conteúdo para o usuário
+ 
+                                       tag head
+ A palavra head significa cabeça ou cabeçalho
+ No contexto do html o <head> é utilizada para definir o cabeçalho do documento HTML
+ O cabeçalho contém informações sobre o documento que são lidas pelo navegador porém, não são
+ exibidas na para o usuário ver
+ Por exemplo: o título da página, a codificação de caracteres, palavras-chave para mecanismos
+ de busca, estilos CSS, scripts JavaScript, entre outros
+ 
+ É na seção <head> que são definidos esses metadados e recursos que serão utilizados no
+ corpo do documento, delimitado pela tag <body>
+ Portanto, a tag <head> é uma parte essencial do código HTML para que as páginas web possam
+ ser corretamente interpretadas pelos navegadores
+ 
+ Como exemplo especificar o charset (conjunto de caracteres ou encoding) usado para a página
+ web
+ exemplo:
+     <head>
+ 		<meta charset="utf-8">
+ 	</head>
+ 
+ Isso acima indica que a página está usando o conjunto de caracteres UTF-8, que é capaz de
+ representar um grande conjunto de caracteres de diferentes idiomas, incluindo caracteres
+ acentuados e símbolos especiais
+ Isso é importante porque garante que o navegador interprete corretamente os caracteres
+ especiais usados na página, evitando erros de exibição ou codificação
+ 
+ resumo: head aqui se monta o cabeçalho da pagina, que não é visto pelo usuário, mas sim pelo
+ navegador
+ Aqui tem informações sobre o documento html ajudando o mecanismo de busca a entender do que
+ se trata esse documento
+ 
+                                  tag <title></title>
+ 
+ Ainda dentro da seção <head></head> , o <title></title> serve para definir o titulo do
+ documento que será exibido na aba do navegador ou na lista dos favoritos, e será vista pelo
+ usuário
+ O texto dentro da tag deve ser escrito com coerência ao que a pagina se trata, isso é de
+ suma importância porque é visto pelo mecanismo de busca do navegador
+ exemplo:
     <!DOCTYPE html>
     <html lang="ptb-BR">
     	<head>
     		<meta charset="utf-8">
     		<title>Minha pagina</title>
     	</head>
-    
-    	<body>
-    		Minha pagina
-    	</body>
     
     </html>
-
-Quando rodei meu código, o navegador foi aberto e apareceu essa frase "Minha pagina"
-no meio da pagina
-
-                                    tag <p></p>
-
-Essa tag é um elemento que representa um paragrafo
-Umas das tag mais utilizadas no html e importante para a organização e legibilidade  do
-conteúdo da página
-Nela é possível adicionar atributos para personalizar o paragrafo usando css
-Assim é possível por cor, fonte, margens e espaçamento
-
-A exemplo ao invés de escrever o texto solto como no exemplo anterior, neste caso vou por o
-texto entre parágrafo
-Veja:
-
-    <!DOCTYPE html>
-    <html lang="ptb-BR">
-    	<head>
-    		<meta charset="utf-8">
-    		<title>Minha pagina</title>
-    	</head>
-    
-    	<body>
-    	    <p>Este p é um paragrafo da Minha pagina</p>
-    	</body>
-    
-    </html>
-
-Perceba que a tag <p> foi escrita dentro do body
-Quando chamei a pagina no navegador foi exibida a mensagem 
-
-Observação: A tag <p> por representar um paragrafo, tecnicamente pode ser escrita em qualquer
-local do documento html.
-Porém é recomendado usar essa tag somente dentro do body, porque o objetivo da marcação HTML
-é fornecer uma estrutura semântica para o conteúdo da página, de modo que o uso correto das
-tags é fundamental para a acessibilidade e a usabilidade da página. Portanto, é recomendável
-que a tag <p> seja usada apenas para criar parágrafos de texto dentro do conteúdo da página,
-como em seções de texto, artigos, etc.
-
-
-                                     tag <footer></footer>
-A palavra footer significa rodapé
-Essa tag serve para criar o rodapé da pagina
-exemplo:
-
-    <!DOCTYPE html>
-    <html lang="ptb-BR">
-    	<head>
-    		<meta charset="utf-8">
-    		<title>Minha pagina</title>
-    	</head>
-    
-    	<body>
-    		<p>Este p é um paragrafo da Minha pagina</p>
-    
-    		<footer>
-    			<p>Aqui é o footer(rodapé) - Pagina feita por Will</p>
-    		</footer>
-    	</body>
-    
-    	
-    </html>
-
-O <footer> foi escrito dentro do body, e o conteúdo está entre paragrafo
-
-
-O conteúdo inserido dentro dessa tag geralmente contém informações adicionais sobre a página,
-como informações de contato, direitos autorais e links importantes.
-É comum que o rodapé inclua links para as políticas de privacidade e termos de uso da página
-A tag <footer></footer> geralmente é colocada depois da tag <main></main> e antes da tag
-<script></script>
-
-                            head dentro de body para criar um titulo
-No corpo da minha pagina não tem um titulo
-Tem um titulo na aba da minha pagina
-Então eu pensei em criar um titulo para o corpo da minha pagina
-Sugestivamente para criar o titulo o que vei a minha cabeção foi: usar a tag <title> para
-criá-lo
-E assim o fiz, veja abaixo:
-	
-    <!DOCTYPE html>
-    <html lang="ptb-BR">
-    	<head>
-    		<meta charset="utf-8">
-    		<title>Minha pagina</title>
-    	</head>
-    
-    	<body>
-    		<title>Minha pagina</title>
-    		
-    		<p>Este p é um paragrafo da Minha pagina</p>
-    
-    		<footer>
-    			<p>Aqui é o footer(rodapé) - Pagina feita por Will</p>
-    		</footer>
-    	</body>
-    </html>	
-
-Acima tenho a linha <title>Minha pagina</title> dentro do body
-Quando rodei meu código a minha pagina não exibiu o titulo, porque a tag <title> é usada para
-criar o titulo da aba da pagina e não o titulo do corpo da pagina
-
-Para criar o titulo dentro do corpo da pagina, preciso usar a tag head, ou seja, criar um
-cabeçalho e usar
-Dentro do body, ou seja, do corpo da pagina posso escrever um elemento head, ou seja,
-um cabeçalho com uma tag h1
-Exemplo:
-
-<!DOCTYPE html>
-<html lang="ptb-BR">
-	<head>
-		<meta charset="utf-8">
-		<title>Minha pagina</title>
-	</head>
-
-	<body>
-		<head>
-			<h1>Usando head e h1, fiz o Titulo Minha pagina</h1>
-		</head>
-
-		<p>Este p é um paragrafo da Minha pagina</p>
-
-		<footer>
-			<p>Aqui é o footer(rodapé) - Pagina feita por Will</p>
-		</footer>
-	</body>
-</html>
-
-
-O que surgiu na minha pagina com essa estrutura foi:
-
-1º Meu titulo ->               Usando head e h1, fiz o Titulo Minha pagina
-
-2º Paragrafo com meus texto -> Este p é um paragrafo da Minha pagina
-
-3º Rodapé                   -> Aqui é o footer(rodapé) - Pagina feita por Will
-
-                            tags h1, h2, h3, h4, h5, h6
-
-</html>
+ 
+ Quando abri minha pagina no navegador com f5, a pagina foi aberta no navegador com a aba
+ contendo escrito → Minha pagina.
+ 
+                                  tag <body></body>
+ 
+ A palavra body significa corpo
+ Essa tag se trata do corpo da pagina
+ Entre o inicio <body> e o fim </body> temos o conteúdo principal da pagina
+ Tudo que for exibido na pagina como Texto, imagens, links e outros elementos está entre essa
+ tag
+ Exemplo:
+ 
+     <!DOCTYPE html>
+     <html lang="ptb-BR">
+     	<head>
+     		<meta charset="utf-8">
+     		<title>Minha pagina</title>
+     	</head>
+     
+     	<body>
+     		Minha pagina
+     	</body>
+     
+     </html>
+ 
+ Quando rodei meu código, o navegador foi aberto e apareceu essa frase "Minha pagina"
+ no meio da pagina
+ 
+                                     tag <p></p>
+ 
+ Essa tag é um elemento que representa um paragrafo
+ Umas das tag mais utilizadas no html e importante para a organização e legibilidade  do
+ conteúdo da página
+ Nela é possível adicionar atributos para personalizar o paragrafo usando css
+ Assim é possível por cor, fonte, margens e espaçamento
+ 
+ A exemplo ao invés de escrever o texto solto como no exemplo anterior, neste caso vou por o
+ texto entre parágrafo
+ Veja:
+ 
+     <!DOCTYPE html>
+     <html lang="ptb-BR">
+     	<head>
+     		<meta charset="utf-8">
+     		<title>Minha pagina</title>
+     	</head>
+     
+     	<body>
+     	    <p>Este p é um paragrafo da Minha pagina</p>
+     	</body>
+     
+     </html>
+ 
+ Perceba que a tag <p> foi escrita dentro do body
+ Quando chamei a pagina no navegador foi exibida a mensagem 
+ 
+ Observação: A tag <p> por representar um paragrafo, tecnicamente pode ser escrita em qualquer
+ local do documento html.
+ Porém é recomendado usar essa tag somente dentro do body, porque o objetivo da marcação HTML
+ é fornecer uma estrutura semântica para o conteúdo da página, de modo que o uso correto das
+ tags é fundamental para a acessibilidade e a usabilidade da página. Portanto, é recomendável
+ que a tag <p> seja usada apenas para criar parágrafos de texto dentro do conteúdo da página,
+ como em seções de texto, artigos, etc.
+ 
+ 
+                                      tag <footer></footer>
+ A palavra footer significa rodapé
+ Essa tag serve para criar o rodapé da pagina
+ exemplo:
+ 
+     <!DOCTYPE html>
+     <html lang="ptb-BR">
+     	<head>
+     		<meta charset="utf-8">
+     		<title>Minha pagina</title>
+     	</head>
+     
+     	<body>
+     		<p>Este p é um paragrafo da Minha pagina</p>
+     
+     		<footer>
+     			<p>Aqui é o footer(rodapé) - Pagina feita por Will</p>
+     		</footer>
+     	</body>
+     
+     	
+     </html>
+ 
+ O <footer> foi escrito dentro do body, e o conteúdo está entre paragrafo
+ 
+ 
+ O conteúdo inserido dentro dessa tag geralmente contém informações adicionais sobre a página,
+ como informações de contato, direitos autorais e links importantes.
+ É comum que o rodapé inclua links para as políticas de privacidade e termos de uso da página
+ A tag <footer></footer> geralmente é colocada depois da tag <main></main> e antes da tag
+ <script></script>
+ 
+                             head dentro de body para criar um titulo
+ No corpo da minha pagina não tem um titulo
+ Tem um titulo na aba da minha pagina
+ Então eu pensei em criar um titulo para o corpo da minha pagina
+ Sugestivamente para criar o titulo o que vei a minha cabeção foi: usar a tag <title> para
+ criá-lo
+ E assim o fiz, veja abaixo:
+ 	
+     <!DOCTYPE html>
+     <html lang="ptb-BR">
+     	<head>
+     		<meta charset="utf-8">
+     		<title>Minha pagina</title>
+     	</head>
+     
+     	<body>
+     		<title>Minha pagina</title>
+     		
+     		<p>Este p é um paragrafo da Minha pagina</p>
+     
+     		<footer>
+     			<p>Aqui é o footer(rodapé) - Pagina feita por Will</p>
+     		</footer>
+     	</body>
+     </html>	
+ 
+ Acima tenho a linha <title>Minha pagina</title> dentro do body
+ Quando rodei meu código a minha pagina não exibiu o titulo, porque a tag <title> é usada para
+ criar o titulo da aba da pagina e não o titulo do corpo da pagina
+ 
+ Para criar o titulo dentro do corpo da pagina, preciso usar a tag head, ou seja, criar um
+ cabeçalho e usar
+ Dentro do body, ou seja, do corpo da pagina posso escrever um elemento head, ou seja,
+ um cabeçalho com uma tag h1
+ Exemplo:
+ 
+ <!DOCTYPE html>
+ <html lang="ptb-BR">
+ 	<head>
+ 		<meta charset="utf-8">
+ 		<title>Minha pagina</title>
+ 	</head>
+ 
+ 	<body>
+ 		<head>
+ 			<h1>Usando head e h1, fiz o Titulo Minha pagina</h1>
+ 		</head>
+ 
+ 		<p>Este p é um paragrafo da Minha pagina</p>
+ 
+ 		<footer>
+ 			<p>Aqui é o footer(rodapé) - Pagina feita por Will</p>
+ 		</footer>
+ 	</body>
+ </html>
+ 
+ 
+ O que surgiu na minha pagina com essa estrutura foi:
+ 
+ 1º Meu titulo ->               Usando head e h1, fiz o Titulo Minha pagina
+ 
+ 2º Paragrafo com meus texto -> Este p é um paragrafo da Minha pagina
+ 
+ 3º Rodapé                   -> Aqui é o footer(rodapé) - Pagina feita por Will
+ 
+                             tags h1, h2, h3, h4, h5, h6
+ Este h na frente dos números é uma abreviação para heading que significa titulo
+ Por isso a indicação de usar essa tag no exemplo anterior
+ 
+ Os números a sua frente, são indicação dos níveis com relação ao tamanho das letras
+ ou seja
+ A tag h1 tem a maior fonte e a tag h6 tem a menor fonte entre as seis
+ exemplo:
+ 
+     <!DOCTYPE html>
+     <html lang="ptb-BR">
+     	<head>
+     		<meta charset="utf-8">
+     		<title>Minha pagina</title>
+     	</head>
+     
+     	<body>
+     		<head>
+     			<h1>Usando head e h1, fiz o Titulo Minha pagina</h1>
+     			<h2>Usando head e h1, fiz o Titulo Minha pagina</h2>
+     			<h3>Usando head e h1, fiz o Titulo Minha pagina</h3>
+     			<h4>Usando head e h1, fiz o Titulo Minha pagina</h4>
+     			<h5>Usando head e h1, fiz o Titulo Minha pagina</h5>
+     			<h6>Usando head e h1, fiz o Titulo Minha pagina</h6>
+     		</head>
+     
+     		<p>Este p é um paragrafo da Minha pagina</p>
+     
+     		<footer>
+     			<p>Aqui é o footer(rodapé) - Pagina feita por Will</p>
+     		</footer>
+     	</body>
+     </html>
+ 
+ O que aparaceu na pagina foi o titulo com tamanhos diferenciados
+ 
+-->
