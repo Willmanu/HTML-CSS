@@ -637,7 +637,40 @@
 
 	  div para separar duas imagens
 
- Na minha pagina tenho uma imagem em serviços que representa serviço de desenvolvimento de
+ Na minha pagina tenho uma imagem em serviços, que representa serviço de desenvolvimento de
  aplicação para desktop, e quero por mais uma imagem que represente serviços mobile
+ Dentro da mesma tag img não é possível por mais uma imagem
+ Para isso usarei a div para organizar as duas imagens
+ exemplo: 
+   <section id="serviços">
+		<h2>Serviços</h2>
+		<p>Temos os melhores serviços para desenvolver sua aplicação e seu site </p>
+		<div>
+			<img src="/home/william/workspace/HTML-CSS/img/servicos.png" 
+			alt="imagem que representa o serviço em desktop"
+			width="300px">
+
+			<img src="/home/william/workspace/HTML-CSS/img/desenvolvimentomobile.png" 
+			alt="imagem que representa o serviço em mobile"
+			width="300px">
+		</div>
+	</section>
+
+ Veja que dentro de section temos a tag <div> com dois elementos dentro dela que são as tags img
+ Quando eu rodei esse código as imagens ficaram uma ao lado da outra e o que eu quero é que fique uma
+ acima e outra abaixo
+
+
+                       Resolvendo problema das imagens uma ao lado da outra
+ Não acontece assim como quero, ou seja, uma imagem embaixo da outra, por elas estão dentro da mesma
+ tag div, e por padrão o elemento div tem -> display: block, encontra partida que outros elementos tem
+ display: inline, oou seja, cada elemento na sua linha
+ 
+ Display significa exibição e block é bloco, ou seja, é para exibir em bloco
+
+ Isso acontece porque as imagens estão dentro do mesmo elemento div, que por padrão tem
+ display: block, ou seja, ocupa toda a largura disponível na linha e força a próxima linha
+ para qualquer elemento seguinte.
+
 
 -->
