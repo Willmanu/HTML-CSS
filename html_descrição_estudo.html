@@ -510,24 +510,87 @@
  6º Rodapé
 
 
-                               Inserindo imagens nas section
+                            Inserindo imagens nas section com tag <img>
  As imagens vão representar cada secção com o qual ela se destina a ser
- O usuário vai poder mentalizar melhor do que se trata cada secção na pagina olhando para a
+ O usuário vai poder mentalizar melhor do que se trata cada secção na pagina, olhando para a
  imagem
 
  Neste projeto criei uma pasta chamada img e guardei minhas imagens nela
  As imagem que tenho são de serviços, pessoas trabalhando e caixa de ferramenta
 
- A tag que vai receber as imagens para a pagina é img
+ A tag que vai receber as imagens para a pagina é <img>
  Ela é usada para inserir imagens na pagina web
- A tag <img> não possui fechamento, ou seja, é uma tag vazia começa com o <
- Ela possui um atributo chamado "src" que aponta para o caminho da imagem
- E pode ter outros atributos como:
- "alt" (texto alternativo da imagem)
- "width" e "height" (largura e altura da imagem em pixels)
+ A tag <img> não possui fechamento, ou seja, é uma tag vazia
+ começa com o < tem a palavra img no meio e fecha com > é um simbolo único diferente dos demais
+ que vimos até agora como por exemplo, o elemento <html>
+	que abre assim <html> e fecha assim </html> o conteúdo vai entre eles
 
+ Ela possui atributos chamados "src", "alt", "width" e  "height"
+  veja um exemplo deles reunidos:
+   <img src="caminho/para/minha/imagem.jpg" alt="Minha imagem" width="500" height="300">
+
+ "src" -> significa "source" em inglês, que traduzido para o português significa "fonte", 
+  é o atributo que aponta para o caminho da imagem
+
+ "alt" -> significa "alternative text" ou "texto alternativo" em português, é usado para fornecer uma
+  descrição textual da imagem, caso ela não possa ser exibida por algum motivo, como quando a imagem
+  está indisponível ou quando um usuário com deficiência visual está usando um leitor de tela
+  Além disso, os motores de busca usam o texto alternativo para indexar e classificar imagens em páginas
+  da web
+
+ "width" -> largura usado para especificar a largura da imagem em pixels
+ É possível definir a largura da imagem em valores absolutos (por exemplo, "300px") ou relativos
+ (por exemplo, "50%")
+ O uso do atributo "width" é importante para que o navegador saiba qual o tamanho da imagem antes mesmo
+ de ela ser carregada, o que permite que o layout da página seja ajustado adequadamente.
+ 
+ "height" -> significa altura e serve para definir a altura da imagem em pixels (ou em outra
+  unidade de medida como porcentagem, por exemplo)
+  É possível definir a altura de uma imagem de forma explícita utilizando o atributo "height",
+  ou de forma implícita deixando o navegador calcular a altura automaticamente com base na
+  proporção  entre a largura e altura da imagem
+
+ Após essa completa explicação dessa parte das imagens, vou colocar imagens na pagina
+ veja o código:
+
+    <section id="serviços">
+		<h2>Serviços</h2>
+		<p>Temos os melhores serviços da região</p>
+		<img src="/home/william/workspace/HTML-CSS/img/caixadferramentas.png" 
+		alt="imagem que representa o serviço">
+	</section>
+
+	<section id="clientes">
+		<h2>Clientes</h2>
+		<p>Cliente satisfeitos é o que sabemos gerar</p>
+		<img src="/home/william/workspace/HTML-CSS/img/Emanuelbobão.jpeg" 
+		alt="Emanuel bobão"
+		width="50%" >
+	</section>
+
+	<section id="parceiros">
+		<h2>Parceiros</h2>
+		<p>OS parceiros são felizes conosco</p>
+		<img src="/home/william/workspace/HTML-CSS/img/Mamãe.png" 
+		alt="Mamãe querida">
+	</section>
+
+	<section id="time">
+		<h2>Time</h2>
+		<p>Nosso time é engajado</p>
+		<img src="/home/william/workspace/HTML-CSS/img/pessoastrabalhando.jpg" 
+		alt="Representa o time de trabalhando">
+	</section>
+
+	<section id="contato">
+		<h2>Contato</h2>
+		<p>Todos os nossos contatos são felizes aqui nesta empresa</p>
+	</section>
+
+  Quando rodei esse código primeiro tive erro porque o endereço das imagens precisam ser
+  exatamente de onde elas estão
+  NO case estão na minha maquina, quando acertei as imagens apareceram sem problema
+ 
  
 
-
- . .
 -->
