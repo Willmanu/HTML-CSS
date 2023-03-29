@@ -662,15 +662,12 @@
 
 
                        Resolvendo problema das imagens uma ao lado da outra
- Não acontece assim como quero, ou seja, uma imagem embaixo da outra, por elas estão dentro da mesma
- tag div, e por padrão o elemento div tem -> display: block, encontra partida que outros elementos tem
- display: inline, oou seja, cada elemento na sua linha
+ Embora a tag img por padrão tem display: inline, ou seja, a exibição da imagem acontece cada 
+ uma na sua linha, aqui neste caso não acontece assim com uma imagem embaixo da outra.
+ Isso porque a tag <div> tem por padrão display: block, ou seja, a exibição das coisas ocupa
+ toda a largura disponível na linha, e força a próxima linha para qualquer elemento seguinte
  
- Display significa exibição e block é bloco, ou seja, é para exibir em bloco
-
- Isso acontece porque as imagens estão dentro do mesmo elemento div, que por padrão tem
- display: block, ou seja, ocupa toda a largura disponível na linha e força a próxima linha
- para qualquer elemento seguinte.
-
+ Para sair como quero preciso dizer que o display vai ser inline
+ Exemplo:
 
 -->
