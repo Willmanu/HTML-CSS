@@ -676,18 +676,19 @@ se trata esse documento
 
                        Resolvendo problema das imagens uma ao lado da outra
 
-                                     div em block ou line
+                                     div em block ou inline
 
  A tag img por padrão tem display: inline
  Display significa exibir e inline é linha
- Então display:ou seja, elementos de linha
+ Então display: inline significa exibir em linha
   Quando um elemento é tratado como inline, outros elementos do mesmo tipo são colocados ao
   lado dele na mesma linha desde que haja espaço suficiente, ou seja, na pagina onde o
-  usuário esta vendo, o mesmo vê o conteúdo uma ao lado da outra
+  usuário esta vendo, o mesmo vê o conteúdo uma ao lado do outro
+  É assim o padrão de exibição da tag div
 
 
  O que eu preciso fazer aqui para que uma imagem fique uma embaixo da outra é:
-  Escrever em display: block
+  Escrever display: block ou seja, exibir em bloco e não em linha
  Dessa forma estou dizendo ao navegador que os elementos que estão dentro da tag img na div,
  sejam colocadas em blocos. É isso que significa display: block -> exibir em bloco, ou seja,
  uma imagem embaixo da outra ao contrario de inline uma oa lado da outra
@@ -710,5 +711,23 @@ se trata esse documento
 			</div>
 		</section>
 
- Nesta section onde 
+ Veja que antes da palavra display temos outra que se chama: style
+ style é um atributo do html que permite adicionar estilos css diretamente na tag, usando
+ sintaxe CSS
+ Exemplo:
+
+   <div style="color: red; font-size: 24px; background-color: yellow;">Meu conteúdo</div>
+
+ Nesse exemplo, o elemento div terá o texto na cor vermelha (color: red), tamanho de fonte 24
+ pixels (font-size: 24px) e fundo amarelo (background-color: yellow;)
+ Essa é a mesma sintaxe usada em arquivos CSS externos ou internos usado aqui no html
+
+ No meu caso o style esta informando que o display será em bloco, um embaixo do outro
+ Além disso também estou definindo uma largura e altura para as imagens e, inserindo um titulo
+ para cada uma usando h4
+
+ Ao rodar esse código as imagens ficaram uma embaixo da outra com os tamanhos definidos em 
+ width e height
+
+
 -->
