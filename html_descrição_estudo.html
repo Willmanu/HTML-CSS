@@ -67,7 +67,7 @@
    o atributo -> lang, sinal de igual = e entre aspas duplas, as siglas do idioma -> "pt-BR"
    isso ja no incio do documento dentro da tag elemento
  exemplo:
- <html lang="ptb-BR"
+ <html lang="ptb-BR">
  
  Perceba que o valor do atributo deve ser o código de idioma de duas letras, como por
  exemplo:
@@ -88,44 +88,58 @@
  corpo do documento, delimitado pela tag <body>
  Portanto, a tag <head> é uma parte essencial do código HTML para que as páginas web possam
  ser corretamente interpretadas pelos navegadores
- 
- Como exemplo especificar o charset (conjunto de caracteres ou encoding) usado para a página
- web
+ Como exemplo será definido a tag head abaixo e dentro dela, escreverei os elementos do html
+ para definir o tipo de caractere da pagina
  exemplo:
-     <head>
- 		<meta charset="utf-8">
- 	</head>
- 
- Isso acima indica que a página está usando o conjunto de caracteres UTF-8, que é capaz de
- representar um grande conjunto de caracteres de diferentes idiomas, incluindo caracteres
- acentuados e símbolos especiais
+   <!DOCTYPE html>
+   <html lang="ptb-BR">
+	    <head>
+	    	<meta charset="utf-8">
+	    </head>
+	</html>
+
+  Nas primeiras linhas temos a declaração da pagina e o elemento <html> informando o idioma
+  Logo após vem o cabeçalho e dentro dele temo os elementos para informar o tipo de caractere
+  da pagina que são: meta e charset
+  
+  A tag <meta> significa meta dados, ou seja, fornece dados do dados html que não
+  são exibidas no navegador
+  
+  charset é um atributo do html e significa conjunto de caractere
+  Este atributo esta recebendo o tipo de caractere "utf-8"  
+  UTF-8 é capaz de representar um grande conjunto de caracteres de diferentes idiomas,
+  incluindo caracteres acentuados e símbolos especiais
+
  Isso é importante porque garante que o navegador interprete corretamente os caracteres
  especiais usados na página, evitando erros de exibição ou codificação
  
- resumo: head aqui se monta o cabeçalho da pagina, que não é visto pelo usuário, mas sim pelo
- navegador
- Aqui tem informações sobre o documento html ajudando o mecanismo de busca a entender do que
- se trata esse documento
+ Então o cabeçalho da pagina informa ao navegador que os meta dados da pagina serão conjuntos
+ de caractere de padrão utf-8, ou seja, caracteres que formaram palavras de diversas linguas
+
+ resumo: com o head se monta o cabeçalho da pagina, que não é visto pelo usuário, mas sim pelo
+navegador
+Aqui tem informações sobre o documento html ajudando o mecanismo de busca a entender do que
+se trata esse documento
  
                                   tag <title></title>
  
- Ainda dentro da seção <head></head> , o <title></title> serve para definir o titulo do
+ Ainda dentro da seção <head></head> , a tag <title></title> serve para definir o titulo do
  documento que será exibido na aba do navegador ou na lista dos favoritos, e será vista pelo
  usuário
  O texto dentro da tag deve ser escrito com coerência ao que a pagina se trata, isso é de
  suma importância porque é visto pelo mecanismo de busca do navegador
  exemplo:
+
     <!DOCTYPE html>
     <html lang="ptb-BR">
     	<head>
     		<meta charset="utf-8">
-    		<title>Minha pagina</title>
+    		<title>Will Tec</title>
     	</head>
-    
     </html>
  
  Quando abri minha pagina no navegador com f5, a pagina foi aberta no navegador com a aba
- contendo escrito → Minha pagina.
+ contendo escrito → Will Tec, que é o nome fictício de minha empresa.
  
                                   tag <body></body>
  
@@ -136,20 +150,19 @@
  tag
  Exemplo:
  
-     <!DOCTYPE html>
-     <html lang="ptb-BR">
+    <!DOCTYPE html>
+    <html lang="ptb-BR">
      	<head>
      		<meta charset="utf-8">
      		<title>Minha pagina</title>
      	</head>
      
      	<body>
-     		Minha pagina
+     		Will Tec
      	</body>
-     
-     </html>
+    </html>
  
- Quando rodei meu código, o navegador foi aberto e apareceu essa frase "Minha pagina"
+ Quando rodei meu código, o navegador foi aberto e apareceu essa frase "Will Tec"
  no meio da pagina
  
                                      tag <p></p>
@@ -656,18 +669,47 @@
 		</div>
 	</section>
 
- Veja que dentro de section temos a tag <div> com dois elementos dentro dela que são as tags img
- Quando eu rodei esse código as imagens ficaram uma ao lado da outra e o que eu quero é que fique uma
- acima e outra abaixo
+ Veja que dentro de section escrevi a tag <div> com dois elementos dentro dela que são as tags
+ img
+ Quando eu rodei esse código as imagens ficaram uma ao lado da outra e o que eu quero é que
+ fique uma acima e outra abaixo
 
 
                        Resolvendo problema das imagens uma ao lado da outra
- Embora a tag img por padrão tem display: inline, ou seja, a exibição da imagem acontece cada 
- uma na sua linha, aqui neste caso não acontece assim com uma imagem embaixo da outra.
- Isso porque a tag <div> tem por padrão display: block, ou seja, a exibição das coisas ocupa
- toda a largura disponível na linha, e força a próxima linha para qualquer elemento seguinte
- 
- Para sair como quero preciso dizer que o display vai ser inline
+
+                                     div em block ou line
+
+ A tag img por padrão tem display: inline
+ Display significa exibir e inline é linha
+ Então display:ou seja, elementos de linha
+  Quando um elemento é tratado como inline, outros elementos do mesmo tipo são colocados ao
+  lado dele na mesma linha desde que haja espaço suficiente, ou seja, na pagina onde o
+  usuário esta vendo, o mesmo vê o conteúdo uma ao lado da outra
+
+
+ O que eu preciso fazer aqui para que uma imagem fique uma embaixo da outra é:
+  Escrever em display: block
+ Dessa forma estou dizendo ao navegador que os elementos que estão dentro da tag img na div,
+ sejam colocadas em blocos. É isso que significa display: block -> exibir em bloco, ou seja,
+ uma imagem embaixo da outra ao contrario de inline uma oa lado da outra
  Exemplo:
 
+  <section id="serviços">
+			<h2>Serviços</h2>
+			<h3>Temos os melhores serviços para desenvolver sua aplicação e seu site</h3>
+			<div >
+				<h4>serviços para desktop</h4>
+				<img src="/home/william/workspace/HTML-CSS/img/servicos.png" 
+				  alt="imagem que representa o serviço em desktop"
+				  width="400px" height="300"
+				  style="display: block;">
+				<h4>Serviços para mobile</h4>
+				<img src="/home/william/workspace/HTML-CSS/img/desenvolvimentomobile.png" 
+				  alt="imagem que representa o serviço em mobile"
+				  width="300px" height="300"
+				  style="display:block;">
+			</div>
+		</section>
+
+ Nesta section onde 
 -->
