@@ -745,8 +745,33 @@ se trata esse documento
  Ela também pode ser usada em conjunto com outros elementos, como imagens ou botões, para criar
  links clicáveis em torno desses elementos
 
+ No meu caso vou criar um link para que quando o user clique em algum item do Menu, ele possa
+ ser levado direto para esse item
+   Exemplo:
+    <nav>
+		<h1>Menu</h1>
+		<ul>
+			<li><a href="#serviços"> Serviços</a></li>
+			<li><a href="#clientes">Clientes</a></li>
+			<li><a href="#parceiros">Parceiros</a></li>
+			<li><a href="#time">Time</a></li>
+			<li><a href="#contatos">Contatos</a></li>
+		</ul>	  
+	</nav>
 
- 
+ Dentro de cada elemento <li> foi colado a tag <a> e o atributo href apontando para cada item no
+ menu, ou seja, o que esta a frente de href, é o id que fiz quando criei a section
+ exemplo:
+ <section id="serviços">
 
+	veja que após a palavra section vem o id, que nesta caso representa serviços
+    então esta linha abaixo
+
+	<li><a href="#serviços"> Serviços</a></li>
+	faz referencia a <section id="serviços">
+
+ Após essas linhas serem criadas, na minha pagina os itens do Menu ficaram sublinhados e, quando
+ clico em  um deles sou levado para a parte da pagina onde cada um deles estão
+ Se clicar em serviços sou levado para serviço
 
 -->
