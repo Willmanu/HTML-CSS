@@ -780,12 +780,50 @@ se trata esse documento
 
  A Section Contato tem como objetivo informar a forma de um usuário entrar em contato com a
  empresa
- Foi adicionado a ele uma imagem que representa o email da empresa, com o email da mesma
+ Foi adicionado a ela uma imagem que representa o email da empresa
  Porém este email não faz nenhuma ação se eu clicar nele
  O objeto então e fazer com que ele vire um link e me leve para um destino
 
   Para isso vou usar novamente a tag <a> junto com o href para construir o link
 	exemplo:
+   <p><a href="">contato@empresa.com</a></p>
 
+   Neste exemplo 1º usei a tag<p> para que o email seja como um paragrafo
+	2º a tag <a> em conjunto com o atributo href esta dentro deste paragrafo para que o paragrafo seja
+	um link
+	Memo sendo um link ainda não leva para lugar nenhum
+	Quero que quando o usuário clicar no email, seja aberto o email deste usuário para que ele envia a
+	mensagem para a empresa
+	exemplo:
+	<p><a href="mailto:contato@empresa.com">contato@empresa.com</a></p>
+
+	explicação:
+	1º escrevi a palavra mailto
+	mailto é um protocolo de URL(Uniform Resource Identifier -> Identificador de Recurso Uniforme) usado
+	para criar um link que inicia uma mensagem de e-mail
+	Essa palavra é uma junção de mai com to "mail + to" que quer dizer "email para"
+	Aqui dentro o href, que é onde fica a referencia html, estou referenciando o email da empresa
+
+	Tudo isso quer dizer o seguinte
+	mailto:contato@empresa.com -> email para contato@empresa.com, ou seja, enviar email para o contato@empresa.com
+
+ Isso quer dizer que quando o usuário clicar no link(contato@empresa.com)que esta na pagina (Will Tec)
+ automaticamente o aplicativo de email padrão, deste usuário que abriu a pagina no browser, será iniciado e
+ quando aparecer para esse usuário seu email padrão, estará preenchido com o email(contato@empresa.com) da
+ na barra "para" pronto para enviar o email para a empresa Will Tec
+  veja o código:
+    <section id="contatos">
+		<h2>Contatos</h2>
+		<p>Entre em contato com nossa equipe</p>
+		<div>
+			<img src="/home/william/workspace/HTML-CSS/img/ImagemEmail.png"
+			alt="Representa o contato da empresa, ou seja , a forma de entrar em contato"
+			width="30px"
+			style="display: block;">
+			<p><a href="mailto:contato@empresa.com">contato@empresa.com</a></p>
+		</div>
+	</section>
+
+    
 
 -->
