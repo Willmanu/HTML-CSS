@@ -866,6 +866,7 @@ se trata esse documento
  específicas que permitem localizar o recurso. O URI é a base para muitas tecnologias web, incluindo
  URLs e URNs
 
+                                        Faze 5 do curso
 
                  Link Externo, ou seja, clico na imagem que me leva para um site
 
@@ -907,6 +908,58 @@ se trata esse documento
  O problema quando eu clico na imagem é que minha pagina é fechada e abre por cima a pagina do
  parceiro
 
+                 Resolvendo caso de fechar minha aba e abrir a do parceiro
+
+				                           target
+
+ O que eu quero é que quando eu clicar na imagem do parceiro, não seja fechada a minha aba,
+ substituindo a minha aba pela do parceiro
+
+ Para isso vou usar o atributo target da tag <a>
  
+ target é usado para especificar onde o conteúdo do link deve ser aberto quando o usuário clicar
+ nele
+
+ Na frente do target tem o sinal de = onde vamos atribuir uma valor como ação a ele
+ O valor desse atributo pode ser um nome de janela, um identificador ou uma palavra-chave especial
+ que indica onde o conteúdo deve ser aberto
+
+ Algumas das opções mais comuns de valores para target são:
+
+ _self: abre o link na mesma janela/aba em que o link foi clicado (essa é a opção padrão, caso o
+ atributo target não seja especificado);
+
+ _blank: abre o link em uma nova janela/aba do navegador;
+ 
+ _parent: abre o link na janela "pai" da janela atual (útil quando o conteúdo está sendo exibido
+ em um frame);
+ 
+ _top: abre o link na janela principal do navegador, substituindo todos os frames (útil quando o
+ conteúdo está sendo exibido em frames e o link deve substituir todo o conteúdo).
+ 
+ A sintaxe para usar o atributo target é a seguinte:
+ 
+    <a href="URL_do_link" target="nome_do_destino">Texto do link</a>
+ 
+ Onde nome_do_destino é o valor que indica onde o conteúdo deve ser aberto.
+ 
+ No meu código a aplicação do atributo target fica assim:
+ Exemplo:
+ 
+ Para Google
+    <a href="https://www.google.com.br/" target="_blank">
+ 
+ Para Microsoft
+ <a href="https://www.microsoft.com/pt-br/" target="_blank">
+ 
+ Agora com a target quando minha pagina é aberta ao executar meu código, as imagens abrem em
+ uma nova aba
+ Quando cliquei na imagem Google abriu a aba do Google
+ Quando cliquei na imagem da Microsoft abriu sua aba e empurrou aba da Google para frente
+ 
+ 
+                                         Faze 6 do curso
+                                Introduzindo o CSS3 ao arquivo HTML5
+
  
 -->
