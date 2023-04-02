@@ -824,6 +824,39 @@ se trata esse documento
 		</div>
 	</section>
 
+                                             Whatsapp
+                Clicando no tel e abrindo o aplicativo do whatsapp na maquina do user
+
+ Da mesma forma que criei um link para abrir o aplicativo de email padrão do usuário na máquina dele
+ vou fazer com o tel para abrir o whatsapp
+   exemplo:
+   
+   <p><a href="https://api.whatsapp.com/send?phone=5511958676322"> (11) 95867-6322(whatsapp)</a></p>
+ 
+ Criei um paragrafo <p> e dentro usei uma tag <a> combinada com href para construir o link
+ Dentro usei o protocolo "https://api.whatsapp.com/send?phone="
+ Seguido do número de telefone da empresa com o código do pais:5511958676322
+
+ O código do pais no caso Brasil é o 55 e não +55 como padrão, e o numero de telefone não tem
+ espaços ou caracteres especiais (como "+" ou "-")
+ Assim quando clicar no link o aplicativo do whatsapp será aberto para enviar uma mensagem para
+ esse número
+  exemplo do código:
+  
+    <div>
+		<img src="/home/william/workspace/HTML-CSS/img/telefone.png"
+			alt="Representa o telefone da empresa"
+			width="30px"
+			style="display: block;"
+		>
+		<p>
+		 <a href="https://api.whatsapp.com/send?phone=5511958676322">(11) 95867-6322(whatsapp)</a>
+	    </p>
+	</div>
+
+
+	No código como o anterior do email, coloquei um imagem
+
  Observação: URI
  Uniform Resource Identifier (URI) é um conjunto de caracteres que identifica de maneira única um recurso
  na Internet.
