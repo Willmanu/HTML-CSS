@@ -1030,10 +1030,54 @@ se trata esse documento
  body
  Para isso preciso entrar no arquivo index e informar a ele que esse body do arquivo style.css é
  para colorir o fundo da pagina com o azul
- Para informar preciso o elemento link
+ Para informar preciso do "elemento link"
+
 
                                         Elemento link
-   exemplo:
+ "link" é uma tag HTML que pode ser usada para incluir um recurso externo em uma página da Web
+ Ele é usado junto com atributos descrevendo o propósito deste link
+  exemplo:
+   
+	<link rel="stylesheet" href="">
+
+  Esse código é um link para folha de estilo, ou seja, o css
+  Por convenção, o link é geralmente a primeira tag dentro da seção <head>
+	Esta seção head é a seção onde vai as tag <meta> e <title> 
+	Exemplo:
+ 
+	    <!DOCTYPE html>
+        <html lang="ptb-BR">
+	    <head>
+	    	<meta charset="utf-8">
+	    	<title>Will Tec</title>
+	    	<link rel="stylesheet" type="text/css" href="">
+	    </head>
+    
+	    <body>
+	    </body>
+
+ "Link" é ligar
+ "rel" é um atributo de link e é uma abreviação da palavra relationship que significa relação
+ "stylesheet" representa a folha de estilo, ou seja, o doc css
+ Neste caso rel=stylesheet quer dizer que a uma relação entre o html e css, ou seja, o elemento
+ link esta criando essa relação entre o html e o css
+
+ "type" significa tipo -> este informa qual o tipo MIME do arquivo
+    MIME significa "Multipurpose Internet Mail Extensions" (Extensões Multipropósito para Correio
+	da Internet)
+	Isso permite que o navegador identifique o tipo de conteúdo que está sendo vinculado e
+	interprete corretamente o arquivo.
+ Para essa caso foi passado "text/css" que quer dizer que é texto css
+
+ href é a referencia, ou seja, é onde eu digo onde este o arquivo css que vai se relacionar com o
+ html
+ O código exato é :
+    <head>
+    	<meta charset="utf-8">
+    	<title>Will Tec</title>
+    	<link rel="stylesheet" type="text/css" href="/home/william/workspace/HTML-CSS/css3/
+		style.css">
+    </head>
     
 
 -->
