@@ -1110,4 +1110,76 @@ se trata esse documento
     https://htmlcolorcodes.com/color-picker/
 
  Neste site posso pegar as cores por hexadecimal e preencher o background
+
+    body
+    {
+    	background:#C4C4E4 ;
+    }
+
+  Esta acima é p preenchimento de uma cor com hexadecimal
+
+
+
+                                        Faze 7 do curso
+ Nesta parte vou estudar sobre:
+  Tamanho de fonte(fonte-size)
+  Margens(margins)
+
+                              Cor diferente no Titulo da pagina
+
+ Agora que o doc HTML e CSS3 estão relacionados podemos usar este arquivos style.css para alterar
+ os elementos html
+ Como exemplo vou alterar a cor dos Títulos
+ Exemplo:			
+ 
+    h1{
+    	color: red;
+    }
+ Então eu escrevi no arquivo style.css o h1, porque ele representa o lugar no HTML que fica os
+ títulos da pagina
+ E entre chaves descrevi a cor que eu quero para os Títulos
+ Onde houver o h1 será atribuído a ele a cor red
+  
+ No caso tenho dois h1:
+  um em <head> dentro do <body> com esse trecho
+    <h1>Will Tec</h1>
+
+ E o outro em <nav> também dentro do <body> com esse trecho
+	<h1>Menu</h1>
+ São os títulos Will Tec nome da empresa, e o título Menu que apresenta o menu
+
+ 
+                            Alterando a cor somente de um Título
+ No caso acima vimos que o código de alteração de h1 altera todos os h1 que tiverem na pagina
+ Mas eu quero que seja alterado somente um o Título Will Tec
+ Para isso preciso fazer com que esse Título "Will Tec" que esta em index.html, seja uma class 
+ exemplo:
+    <h1 class="primeiro-h1">Will Tec</h1>
+
+ Dentro da tag h1, especificamente a que abre, escrevi a palavra class que recebe seu nome
+ "primeiro-h1"
+ Após isso fui no arquivo style.css e escrevi o seguinte código
+
+    .primeiro-h1{
+    	color: blue;
+    }
+
+	Chamei a classe pelo seu nome e entre a chaves passei a cor que quero que fique este título
+
+ Quando executei o código somente o título "Will Tec ficou com a cor que eu desejo"
+
+ Para alterar a cor do título Menu é só faze o mesmo processo:
+
+ 1º transforma em class no arquivo index.html
+   <h1 class="segundo-h1">Menu</h1>
+
+ 2º chama esta classe no arquivo style.css
+    .segundo-h1{
+    	color: red;
+    }
+ 
+	Quando executei o código o título Menu ficou com a cor passada
+
+
+	
 -->
