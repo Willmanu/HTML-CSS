@@ -2,7 +2,7 @@ body
 {
 	background:#C4C4E4 ;
 	font-family: Arial, Helvetica, sans-serif;
-	
+	margin-left: 20px;
 }
 
 .primeiro-h1{
@@ -15,5 +15,5 @@ body
 }
 
 p{
-	font-size: 12px;
+	font-size: 20px;
 }
