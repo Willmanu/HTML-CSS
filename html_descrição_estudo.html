@@ -1209,16 +1209,57 @@ se trata esse documento
  fonte que funcione
    Por exemplo:
 
-    p {
-      font-family: Arial, Helvetica, sans-serif;
+    body
+    {
+    	background:#C4C4E4 ;
+    	font-family: Arial, Helvetica, sans-serif;
     }
 
+ Aqui acima eu entrei no arquivo style.css e criei essa linha de código do font-family
  Nesse exemplo, o navegador tentará utilizar a fonte Arial, se não for possível, tentará a fonte
  Helvetica e, por fim, procurará por uma fonte do tipo sans-serif, que é uma fonte genérica sem
  serifa.
 
-                               Alterando a fonte do meu arquivo html
+ Eu não tinha especificado a fonte quando comecei esse projeto
+ Então por padrão o navegador que abrir minha pagina, vai escolher a melhor fonte disponível que á
+ na maquina do usuário
 
-							   
+  Quando rodei o código a fonte da pagina ficou com arial
+    
+        Especificando fonte para um elemento, afim de que seja diferentes do body
+						
+ Neste exemplo acima defini a fonte arial que afeta todo o corpo da pagina
+ Porém eu quero que a fonte do título "Menu" por exemplo, não seja a fonte arial
+
+ Para isso posso definir uma fonte especifica para esse título "Menu" que não vai afetar o body
+ exemplo:
+    .segundo-h1{
+    	color: red;
+    	font-family: Ani ;
+    }
+ 
+ Defini uma fonte que mostre realmente uma diferença enorme com a arial
+ Com esse código apenas o título "Menu" foi afetado
+
+                                            fonte-size
+
+ size significa tamanho
+ Enquanto a propriedade font-family altera a forma dos caracteres, a propriedade font-size altera
+ o tamanho deles
+ 
+ Do mesmo jeito que não defini fonte para a aparência dos caracteres, e depois o fiz com
+ font-family, neste caso eu também não defini uma fonte para os parágrafos (alias não fiz nenhuma
+ definição na pagina até agora tudo é padrão), então da mesma forma de font-family o navegador
+ que abrir minha pagina web defini a font-size padrão
+ 
+ Vou quebrar este padrão e definir um tamanho para os caracteres usando o font-size
+Exemplo:
+ 
+    p{
+    	font-size: 12px;
+    }
+
+ Neste exemplo defini que todos o parágrafos da pagina sejam de tamanho 12 pixel
+ Quando executei o código todos os parágrafos ficaram com 12 pixel
 
 -->

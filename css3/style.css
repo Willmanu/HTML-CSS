@@ -1,6 +1,8 @@
 body
 {
 	background:#C4C4E4 ;
+	font-family: Arial, Helvetica, sans-serif;
+	
 }
 
 .primeiro-h1{
@@ -9,5 +11,9 @@ body
 
 .segundo-h1{
 	color: red;
+	font-family: Ani ;
 }
 
+p{
+	font-size: 12px;
+}
