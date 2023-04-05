@@ -5,8 +5,12 @@ body
 	margin-left: 20px;
 }
 
-section{
+.section_serviços{
 margin-top: 70px;
+}
+
+.section_clientes{
+	margin-top: 70px;
 }
 
 .primeiro-h1{

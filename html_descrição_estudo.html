@@ -1310,5 +1310,44 @@ Exemplo:
 
  Somente o footer que não esta 70 pixel de espaçamento de contato
  
+                        Criando class para o css3 manipular os elementos html
 
+ NO exemplo anterior vimos espaçamentos entre o head e section, entre section e section etc.
+ Criei um código em style.css para ter um espaçamento entre as section
+ Este abaixo
+    section{
+    	margin-top: 70px;
+    }
+
+ Este código quando foi executado funcionou perfeitamente
+ Porém ele cria uma margin de 70 pixel acima(top) para todas as section, ou seja,  onde tiver no html a
+ palavra section, o navegador vai inserir o 70 pixel de espaço para cima dela, empurrando quem estiver
+ a cima de section
+
+ Mas digamos que na minha pagina só precise de espaçamento somente nas sections Serviços e Clientes, e na
+ demais não?
+
+ Para isso uso o atributo class
+ Este atributo que pode ser adicionado a elementos HTML, para definir um ou mais nomes que vão representar
+ o estilo desse elemento que recebeu este atributo
+ Assim dessa forma a classe permite que o elemento seja identificado e estilizado com CSS de forma
+ específica.
+
+ Em outras palavras, a classe é uma forma de agrupar elementos HTML que compartilham as mesmas
+ propriedades de estilo, permitindo que o estilo seja aplicado a todos os elementos de uma classe ao 
+ mesmo tempo. Para definir uma classe em HTML, é necessário adicionar o atributo "class" ao elemento,
+ seguido do nome da classe, como no exemplo abaixo:
+ 
+   <section id="serviços" class="section_serviços">
+ 
+ Neste exemplo a section serviço agora pode ser representada no css por section_serviço, pois esse é
+ o nome da classe
+   exemplo:
+
+    .section_serviços{
+    	margin-top: 70px;
+    }
+
+ Desta forma a propriedade margin só afeta  section serviços, e não mais a outras section como estava
+ afetando anteriormente
 -->
