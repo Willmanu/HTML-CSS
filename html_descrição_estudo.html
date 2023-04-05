@@ -1338,7 +1338,7 @@ Exemplo:
  mesmo tempo. Para definir uma classe em HTML, é necessário adicionar o atributo "class" ao elemento,
  seguido do nome da classe, como no exemplo abaixo:
  
-   <section id="serviços" class="section_serviços">
+    <section id="serviços" class="section_serviços">
  
  Neste exemplo a section serviço agora pode ser representada no css por section_serviço, pois esse é
  o nome da classe
@@ -1348,6 +1348,40 @@ Exemplo:
     	margin-top: 70px;
     }
 
+ Perceba que antes do nome da classe vem o "ponto", iss quer dizer nesta linha que vou escrever
+ um nome de uma classe
  Desta forma a propriedade margin só afeta  section serviços, e não mais a outras section como estava
  afetando anteriormente
+
+ É uma boa prática para estilizar elementos no HTML.
+ Com o uso de classes, é possível selecionar vários elementos ao mesmo tempo e aplicar estilos
+ a eles, o que facilita a manutenção do código CSS e torna a página mais consistente visualmente.
+
+ Além disso, ao atribuir classes aos elementos HTML, é possível criar regras de estilo mais
+ específicas e precisas, evitando conflitos entre estilos que podem ser aplicados a um mesmo
+ elemento.
+
+ Além de criar espaço entre as section, dentro desta class posso: 
+    .section_serviços img{
+    	width:400px;
+    	height:300px;
+    }
+ Eu chamei a classe  descrevendo que quero estilizar a imagem (.section_serviços img) 
+ e dentro das chaves passei as propriedades que quero estilizar que no caso é width e height,
+ ou seja, largura e altura da imagem
+
+  Note que aqui escreve o nome da propriedade, depois dois ponto, o valor destas propriedades
+ não esta entre aspas como esta no html e por fim o ; o ponto e virgula
+ exemplo:
+
+   width="400px" height="300px"
+ 
+   Por padrão no css quando usa suas propriedades é dessa forma que é escrita:
+    1º o nome da propriedade
+    2º os dois ponto :
+    3º o valor da propriedade
+    4º o ponto e virgula
+
+
+
 -->

@@ -12,6 +12,10 @@ margin-top: 70px;
 .section_clientes{
 	margin-top: 70px;
 }
+.section_serviços img{
+	width:400px;
+	height:300px;
+}
 
 .primeiro-h1{
 	color: blue;
