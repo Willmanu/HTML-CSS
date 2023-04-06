@@ -17,6 +17,15 @@ margin-top: 70px;
 	height:300px;
 }
 
+.img_google{
+	width: 210px;
+	margin-bottom: 20px;
+}
+
+.img_microsoft{
+	width: 200px;
+}
+
 .primeiro-h1{
 	color: blue;
 }
