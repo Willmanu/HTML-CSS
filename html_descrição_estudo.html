@@ -343,40 +343,20 @@ se trata esse documento
  
  O que aparaceu na pagina foi o titulo com tamanhos diferenciados
 
-                                           Negrito e itálico 
- tag <b>
- Com a tag <b> transformo os caracteres em negrito
- A letra b neste contexto é uma abreviação de "bold" que significa "negrito" em inglês
- exemplo:
-    <h1 class="primeiro-h1"><b>Will Tec</b></h1>
+                                           
 
- A tag <b> foi adicionada a frente do texto que eu quero que seja negrito, o texto é Will Tec
-	Quando executei esse código tive o Titulo do corpo Will Tec em negrito
+                                     Combinando negrito com itálico
+ Para combinar negrito com itálico é assim:
+   <h1 class="primeiro-h1"><b><i>Will Tec</i></b></h1>
+
+ Ao executar o código tive o resultado combinado
+
+ .primeiro-h1{
+	color: rgb(26, 25, 25);
+}
  
- tag <strong>
- Existe a tag <strong> que faz o texto ficar em negrito também
- 
- strong significa forte, ou seja, ao usar a tag <strong>, você está indicando que o texto contido dentro
- da tag é importante, independentemente do estilo visual que ele possa ter.
- Isso é útil para ajudar a transmitir a estrutura e o significado do seu conteúdo para leitores de tela,
- motores de busca e outros dispositivos que possam estar processando seu conteúdo de maneira não visual.
-  exemplo:
-  <h1 class="primeiro-h1"><strong>Will Tec</strong></h1>
-
- Ao executar este código tive o mesmo resultado com a tag <b> porém o que as diferencia é o significado
- semântico que strong da ao texto, ou seja, o texto será importante para os leitores de tela, motores de
- busca e outros dispositivos que possam estar processando seu conteúdo de maneira não visual
 
 
-                                                Itálico
- tag <i> é uma tag que define um trecho de texto em itálico
- A palavra "itálico" é derivada do latim "italicus", que significa "da Itália". 
- Na antiguidade, a escrita itálica era uma forma de escrita cursiva usada na Itália, e que posteriormente se tornou popular em outros lugares.
- Com o tempo, a escrita itálica passou a ser associada ao estilo inclinado e cursivo, que hoje é conhecido como itálico, e que é frequentemente usado para indicar ênfase ou para fins decorativos em textos impressos e digitais.
- Exemplo:
-
-
- 
 
                                Quebra de linha <br> no Paragrafo <p>
  A sigla "br" significa "break" (quebra de linha)
@@ -433,7 +413,7 @@ se trata esse documento
 
 
                                         2º faze do curso
- Implementando novas tags: navegação, sessão e imagem
+Implementando novas tags: navegação, negrito, itálico, sessão e imagem
  
                                 tag <nav> introduzindo menu a pagina
 
@@ -519,6 +499,49 @@ se trata esse documento
     -Contato
  5º O paragrafo
  6º Rodapé
+
+                                              Negrito e itálico 
+ tag <b>
+ Com a tag <b> transformo os caracteres em negrito
+ A letra b neste contexto é uma abreviação de "bold" que significa "negrito" em inglês
+ exemplo:
+    <a href= "#serviços"><b>Serviços</b></a>
+
+ A tag <b> foi adicionada a frente do texto que eu quero que seja negrito, o texto é Serviços
+	Quando executei esse código tive o Serviços do Menu em negrito
+ 
+ tag <strong>
+ Existe a tag <strong> que faz o texto ficar em negrito também
+ 
+ strong significa forte, ou seja, ao usar a tag <strong>, você está indicando que o texto contido dentro
+ da tag é importante, independentemente do estilo visual que ele possa ter.
+ Isso é útil para ajudar a transmitir a estrutura e o significado do seu conteúdo para leitores de tela,
+ motores de busca e outros dispositivos que possam estar processando seu conteúdo de maneira não visual.
+  exemplo:
+  <a href= "#serviços"><strong>Serviços</strong></a>
+
+ Ao executar este código tive o mesmo resultado com a tag <b> porém o que as diferencia é o significado
+ semântico que strong da ao texto, ou seja, o texto será importante para os leitores de tela, motores de
+ busca e outros dispositivos que possam estar processando seu conteúdo de maneira não visual
+
+ Neste caso usamos o strong aqui para teste e compreensão do que essa tag é
+ O ideal para usar strong são em texto que deve ter uma importância significativa para a pagina
+
+
+                                                Itálico
+ tag <i> é uma tag que define um trecho de texto em itálico
+ A palavra "itálico" é derivada do latim "italicus", que significa "da Itália". 
+ Na antiguidade, a escrita itálica era uma forma de escrita cursiva usada na Itália, e que posteriormente se tornou popular em outros lugares.
+ Com o tempo, a escrita itálica passou a ser associada ao estilo inclinado e cursivo, que hoje é conhecido como itálico, e que é frequentemente usado para indicar ênfase ou para fins decorativos em textos impressos e digitais.
+ Exemplo:
+   <h1 class="primeiro-h1"><i>Will Tec</i></h1>
+
+ Da mesma form que escrevi o negrito é escrito o itálico, ou seja, abrindo a tag a frente dos caracteres
+ que quero afetar e fechando ao fim dos caracteres
+ Ao executar o código tive os caracteres em itálico
+
+
+
 
                                     tag section <section></section>
 
