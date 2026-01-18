@@ -1,47 +1,170 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Quiz para programadores</title>
-		<meta name="description" content="Um Quiz interativo para testar meus conhecimentos">
-
+	<head><!--Esse head (diferente de header) é onde fica a configuração da pagina. É carrega os dados que  aparecem na aba da pagina-->
+	  <title>Quiz para programadores</title>
+	  <meta name="description" content="Um Quiz interativo para testar meus conhecimentos">
 	</head>
 
-	<body>
-		<header>
-			<h1>Quiz interativo para programadores</h1>
-			<p>Teste seus conhecimentos em programação e veja qual pontuação consegue fazer!</p>
-		</header>
-		<main>
-			<!--introdução-->
+	<body><!-- A parte visual da pagina vai ficar aqui dentro do body-->
+		<!--Aqui abaixo fica as tres tags principais que apresentam o conteúdo ao usuário-->
+		<!--A pagina é dividida em header ->cabeçalho(parte superior), main->conteúdo principal e footer->rodapé-->
+
+	  <header><!--header (diferente de head) carrega os dados que o usuário vê na parte superior como titulo, subtítulo etc-->
+	    <h1>Quiz interativo para programadores</h1>
+	    <p>Teste seus conhecimentos em programação e veja qual pontuação consegue fazer!</p>
+	  </header>
+
+	    <main><!--Carrega o conteúdo principal-->
+
+	      <section><!--cria seções na pagina, está apresenta a introdução do conteúdo--> 
+	      	<h2>Sobre esse Quiz</h2> 
+
+			                      <!--strong deixa o que está entre ele em evidência  -->
+	      	<p><strong>Este quiz</strong> foi desenvolvido para testar seus conhecimentos em programação, como <em>linguagens de programação</em>, conceitos básicos e mais.</p> <!--em é como se fosse negrito-->
+
+	      	<p>Você encontrará diferentes tipos de perguntas, incluindo múltiplas escolha, texto e perguntas de data. <br>Desafie-se com este quiz!</p> <!--br joga o conteúdo a frente dala para proxima linha-->
+
+                                                    
+	      	<p>Você poderá encontrar alguns acrônimos com <abbr title="HTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto)">HTML</abbr> e <abbr title="CSS significa Cascading Style Sheets (Folhas de Estilo em Cascata)">CSS</abbr>, que são comumente usados em questões relacionadas ao desenvolvimento web</p>
+			<!--abbr->abbreviation-> abreviação, ao passar o mouse na palavra HTML, que é uma palavra abreviada, o usuário vê o que significa esta palavra-->
+	      </section> 
+
+		  <!-- Pergunta 1 -> Múltipla escolha com radio onde somente uma é a correta-->
+	      <section>
+	      	<h2>Pergunta 1:Qual linguagem é usada para estruturar páginas web?</h2>
+	      	
+	      	<form> <!-- Aqui é onde o User vai entrar com dados. Sempre que vai se colher dados, usa o form-->
+				   <!-- Quando o usuário acessa um site ele acessa por uma url, e o form envia os dados de reposta para essa url no qual o user esta-->
+
+				<!--Essa pergunta é de múltipla escolha. para isso, vamos precisar das tags input(entrada) e label(rótulo)-->
+				<!--O usuário vai precisar ver na pagina suas opções de escolha, e o botão para tomar sua decisão--> 
+				<!--o input é o botão de decisão e, quem vai colher a resposta do user e enviar esses dados para o formulário-->
+				<!-- a label é responsável para apresentar de forma visual, as opção de escolha-->
+				 <!--O input o usuário não vê, ele só colhe os dados do user e envia para o form e este envia para o servidor-->
+				 <!--por isso precisa da label para o user ver sua opções-->
+
+	      	  <input type="radio" value="Python" id="p1a" name="pergunta1">
+	      	  <label for="p1a">Python</label><br>
+
+	    	  <input type="radio" value="HTML" id="p1b" name="pergunta1">
+	    	  <label for="p1b">HTML</label><br>
+
+	    	  <input type="radio" value="Ruby" id="p1c" name="pergunta1">
+	    	  <label for="p1c">Ruby</label><br>
+
+			  <!--Aqui a lógica que sera construída é:-->
+	    	    	<!--input (entrada) é para colher a entrada do suário na tela,-->
+	    			<!--esse input tem vários um atributos, dentre eles tem un chamado type com valor -> radio-->
+	    			<!--radio vem de Radio button (botão de opção -> uma bolinha) é um componente de interface gráfica que permite ao usuário selecionar apenas uma única opção de um conjunto de escolhas.-->
+					<!--Neste momento se olhar na pagina pelo local Hot 5500, podemos ver essa bolinha. Quando clicada muda de cor, indicando que essa opção foi escolhida-->
+					<!--Como a lógica aqui é múltipla escolha, temos outros atributos e o label, para que a lógica de certo-->
+
+					<!-- atributo value do input carrega os valores das opções. Isso é importante para o servidor, saber o que o user esta escolhendo, já que ele não sabe o que é label. O servidor só sabe o que é input-->
+					<!--O atributo id, é o identificador da opção. Ela cria relacionamento entre a labele o javascript-->
+					<!--name é o atributo que faz com que, na pergunta de múltipla escolha, onde somente uma é possível escolher, somente essa escolhida seja tingida de outra cor, afirmando que a escolha é essa de fato, assim não podendo escolher mais de uma. Quando escolhida uma a cor acende nessa. Se for escolher outra, a cor sai da primeira escolhida, e vai para esta nova, assim ficar somente uma e não em duas opções ticadas-->
+
+					<!--Na label o atributo for(para) recebe o id, indicando de quem é essa label-->
+					<!--no meio da label temos a descrição que o usuário vai ver na tela dele-->
+	      	</form>
+	      </section>
+
+          <!--pergunta 2-> com input formato campo de texto(um retângulo)-->
 		  <section>
-		  	<h2>Sobre esse Quiz</h2>  
-		  	<p><strong>Este quiz</strong> foi desenvolvido para testar seus conhecimentos em programação, como <em>linguagens de programação</em>, conceitos básicos e mais.</p>  
-		  	<p>Você encontrará diferentes tipos de perguntas, incluindo múltiplas escolha, texto e perguntas de data. <br>Desafie-se com este quiz!</p>  
-		  	<p>Você poderá encontrar alguns acrônimos com <abbr title="HTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto)">HTML</abbr> e <abbr title="CSS significa Cascading Style Sheets (Folhas de Estilo em Cascata)">CSS</abbr>, que são comumente usados em questões relacionadas ao desenvolvimento web</p>  
-		  </section>  
-		  <!-- Pergunta 1 -> Múltipla Escolha-->
+			<h2>Pergunta 2: Na <abbr title="Uniform Resource Locator">URL</abbr> https://www.google.com o trecho "google.com" é o_________</h2>
+
+			<form>
+			<input type="text" id="p2" name="pergunta2" placeholder="Digite sua resposta...">
+			<!--A logica aqui é outra, quem vai colher o input do usuário é o type=text-->
+			<!--o text gera uma retângulo para escrever o texto do usuário-->
+			<!--por conta desse text que gera o retângulo, não precisamos ter o label, o usuário vai digitar dentro do retângulo-->
+			<!--placeholder significa espaço reservado, ou seja, dentro do retângulo, onde vai ser escrito o texto do usuário, tera essa mensagem: Digite sua resposta, indicando onde o usuário deve escrever sua resposta -->
+			</form>
+		  </section>
+
+		  <!--pergunta 3 - input de Senha-->
 		  <section>
-		  	<h2>Qual linguagem é usada para estruturar páginas web?</h2>
-		  	
-		  	<form> <!-- Aqui é onde o User vai entrar com dados. Sempre que vai se colher dados, usa o form-->
-		  	  <input type="radio" value="Python" id="p1" name="pergunta1"><
-		  	  <label for="p1">Python</label>  
+			<h2>Pergunta 3: Escreva um exemplo de senha forte</h2>
 
-			  <input type="radio" value="HTML" id="p2" name="pergunta1">
-			  <label for="p2">HTML</label>
+			<form>
+				<input type="password" id="p3" name="pergunta3" placeholder="Digite uma senha forte ...">
 
-			  <input type="radio" value="Ruby" id="p3" name="pergunta1">
-			  <label for="p3">Ruby</label>
-			    	<!--input é para colher a entrada dou suário na tela,-->
-					<!--esse input tem um atributo chamado type, ou seja, é a forma que esse input vai ser mostrado na tela do usuário -->
-					<!--radio vem de Radio button (botão de opção -> uma bolinha) é um componente de interface gráfica que permite ao usuário selecionar apenas uma única opção de um conjunto de escolhas.-->
-					<!-- Como o radio temos o CheckBox que é caixinha e tem a mesma finalidade. Radio bolinha e Checkbox caixinha quadrinha-->
-		  	</form>
-		
-		  	 <!--  ->
+				<!--password é o type para colher senha do usuário-->
+			</form>
+		  </section>
 
-		  </section>  
-		</main>
+		  <!--pergunta 4 input da data-->
+		  <section>
+			<h2>Pergunta 4: Em que ano HTML lançou sua primeira versão?</h2>
+			<form>
+				<input type="date" name="pergunta4" id="p4">
+				<!--o type date colhe entrada de data-->
+				<!--na pagina aparece um campo com calendário, que permite a escolha do dia mês e ano-->
+			</form>
+		  </section>
+
+		  <!--pergunta 5 input de seleção múltipla escolha checkbox onde mais de uma pode ser a correta -->
+		  <section>
+			<h2>Pergunta 5: Quais dessas tecnologias são consideradas linguagens de programação</h2>
+
+			<form>
+				<input type="checkbox" id="p5a" name="pergunta5" value="Javascript">
+				<label for="p5a">Javascript</label>
+
+				<input type="checkbox" id="p5b" name="pergunta5" value="HTML">
+				<label for="p5b">HTML</label>
+
+				<input type="checkbox" id="p5c" name="pergunta5" value="CSS">
+				<label for="p5c">CSS</label>
+
+				<input type="checkbox" id="p5d" name="pergunta5" value="Ruby">
+				<label for="p5d">Ruby</label>
+
+				<!--Enquanto o type radio só deixa escolher uma opção, este o checkbox permite mais de uma opção-->
+			</form>
+		  </section>
+
+		  <!--Pergunta 6 upload de arquivo com file-->
+		  <section>
+			<h2>Pergunta 6: Faça o upload de um arquivo contendo código HTML </h2>
+
+			<form>
+				<input type="file" id="p6" name="pergunta6">
+
+
+              <!--Como o type file o usuário vê na sua tela um campo que, quando clica nele, abre o diretório de arquivo da maquina, para escolher um tipo. Após selecionado aparace o tipo de arquivo na frente do campo-->
+			</form>
+		  </section>
+
+		  <!--Pergunta 7 menu suspenso (dropdown)-->
+          <section>
+			<h2>Pergunta 7: Selecione o atributo do input que define o seu tipo:</h2>
+
+			<form>
+				<select name="pergunta7" id="p7">
+					<option value=""></option>
+					<option value="id">id</option>
+					<option value="name">name</option>
+					<option value="type">type</option>
+				</select>
+
+				<!--para este tipo de pergunto, ao invés do input usamos o select, de seleção mesmo-->
+				<!--dentro dele colocamos a tag option com seus valores-->
+				<!--o usuário vai ver na sua tela uma caixa de opções com os valores que colocamos nos option-->
+			</form>
+		  </section>
+
+		  <!--Pergunta 8 adicionando imagens-->
+		  <section>
+			<h2>Pergunta 8 : Qual linguagem de programação é representada pelo logotipo abaixo?</h2>
+			<form>
+				<img src="./assets/imagemruby.png" alt="Logotipo de uma linguagem de programação">
+
+			</form>
+
+		  </section>
+
+
+	    </main>
 		<footer></footer>
 	</body>
 
