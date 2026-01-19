@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head><!--Esse head (diferente de header) é onde fica a configuração da pagina. É carrega os dados que  aparecem na aba da pagina-->
+	<head><!--Esse head (diferente de header) é onde fica a configuração da pagina. O navegador usa isso para entender a página, não para mostrar dados. Embora carregue os dados que aparecem na aba da pagina. Serve para configurar o documento, não é conteúdo visível direto.-->
 	  <title>Quiz para programadores</title>
 	  <meta name="description" content="Um Quiz interativo para testar meus conhecimentos">
 	</head>
@@ -156,22 +156,157 @@
 		  <!--Pergunta 8 adicionando imagens-->
 		  <section>
 			<h2>Pergunta 8 : Qual linguagem de programação é representada pelo logotipo abaixo?</h2>
+
+			<figure>
+			  <img src="./assets/imagemruby.png" alt="Logotipo de uma linguagem de programação"><br>
+			  <figcaption>Figura que representa uma linguagem de programação</figcaption>
+			</figure>
+			<!--A tag figure é onde se cria o ambiente para figuras e escrever coisas relativas essa figura com outras tag-->
+			<!--a tag img e seus atributos é quem tem o papel de mostrar a imagem na tela.-->
+			<!--O atributo src(source) recebe o endereço que a figura esta para renderizar na tela do usuário-->
+			<!--alt é muito importante para descrever a figura para usuários com deficiência visual.Sem o alt o leitor visual não diz o que é a imagem, passando informações que não ajudam o usuário -->
+			<!--a tag figcaption serve para descrever a figura para o usuário sem deficiência visual. O alt descreve a figura para audio visual, mas não mostra na tela. Por isso a tag figcaption, para apresentar na tela a descrição da imagem-->
 			<form>
-				<img src="./assets/imagemruby.png" alt="Logotipo de uma linguagem de programação">
+			  <input type="text" id="p8" name="pergunta8" placeholder="Digite aqui sua resposta...">
+			</form>
+
+		  </section>
+
+		  <!--tabela de pontuação - trabalhando com tabela-->
+		  <section>
+			<h2>Tabela de pontuação</h2>
+
+			<!--Para trabalhar com tabelas usa-se a tag <table></table> e dentro desta tudo que relativo a tabela -->
+			<table border="1">
+				<!--dentro da tag table, segue o mesmo conceito construído no inicio do HTML, ou seja, header, body e footer. Porque a tabela também tem isso cabeçalho, corpo e rodapé-->
+				<!--esse atributo dentro de table, border, serve para criar as bordas das células. Quanto maior sua numeração maior sua borda, ela atinge toda a tabela, ou seja, thead, tbody e tfoot -->
+
+			  <thead>
+				<!--Diferente do head, este thead serve para identificar o cabeçalho(header) da tabela — é conteúdo, não configuração, explica os dados da tabela-->
+
+				<tr>
+				  <th>Pontuação</th>
+				  <th>Avaliação</th>
+				</tr>
+                 <!-- esta tag tr (table row->linha da tabela) cria as linhas da tabela. Tudo que está dentro dela, vai se estendendo para direita. Toda ves que precisa criar uma linha, use-se ela, e dentro com outras tag, cria a células-->
+				  <!--a tag th é: table header->cabeçalho da tabela, ela funciona igual o h1, como um titulo para as células. Deixa a escrita mais forte em negrito e centraliza no meio da célula informação....eu defino como o titulo das colunas, porque, escrita aqui dentro de thead, vai funcionar como isso: titulo da coluna-->
+
+			  </thead>
+			  <tbody>
+			  <!--aqui fica o conteúdo central da tabela, ou seja, os dados-->
+			    <tr>
+			      <td>0-2</td>
+			      <td>Não desista! Cada tentativa é uma oportunidade de vcê aprender</td>
+  
+			    	<!-- esta tag td significa-> table data (dado da tabela), cria a célula com dados-->
+			    </tr>  
+			    <tr>
+			      <td>3-4</td>
+			      <td>Você ainda precisa melhorar. Que tal estudar mais programação</td>
+			    </tr>
+  
+			    <tr>
+			      <td>5-7</td>
+			      <td>Bom! Seu conhecimento em programação está satisfatório</td>
+			    </tr>
+  
+			    <tr>
+			      <td>8</td>
+			      <td>Perfeito vc está muito bem informado sobre programação</td>
+			    </tr>  
+			  </tbody>
+
+			  <tfoot>
+			  <!--aqui é onde fica as informações do rodapé da tabela-->
+			    <tr>
+					<th colspan="2">Boa sorte na próxima! Estude mais para melhorar</th>
+					<!--este atributo colspan = column span (quantas colunas a célula ocupa)-->
+					<!--Como estamos no rodapé da tabela, e a tabela tem 2 células, se não colocar este atributo, a mensagem fica somente na primeira células e, a outra ou outras, ficam vazias esperando dados-->
+				</tr>
+
+			  </tfoot>
+
+			</table>
+		  </section>
+
+		  <!--Lista de resposta. Trabalhando com lista-->
+		  <section>
+			<h2>Verifique suas respostas</h2>
+
+           	<details>
+				<!--esta tag details foi adicionada depois do treco abaixo ol ou ul, ela serve para ocultar conteúdo-->
+				<!--percebi que: quando o usuário desse respondendo as perguntas, este trecho mostrava as respostas.-->
+				<!--assim ao adicionar a tag details, foi escondida a lista com as respostas. Ela cria um botão que quando clicado nele, abre a lista mostrando as respostas. -->
+				<!--colocando po-->
+				<summary>Clique aqui para ver as respostas</summary>
+				  <!-- essa tag summary foi adicionada logo após a tag details-->
+				  <!--porque na tela do usuário ficava aparecendo a palavra Detalhe e, isso é padrão quando adicionada somente a tag details. Com a tag summary, temos na frente do botão que recolhe as resposta, a frase que esta dentro de summary-->
+				  <!-- summary é título clicável, ao clicar mostra o conteúdo escondido-->
+				  <ol><!--<ul>-->
+				  	<li>HTML</li> 
+				  	<li>Domínio</li>
+				  	<li>N@hgt5mk#</li>
+				  	<li>1991</li>
+				  	<li>Javascript e Ruby</li>
+				  	<li>O arquivo tem que ter extensão .html</li>
+				  	<li>type</li>
+				  	<li>Ruby</li>
+				  </ol><!--</ul>-->
+		   	</details>
+			<!--esta tag ul unordered list-> lista não ordenada, é quem cria a lista-->
+			<!--dentro da tag ul usamos a tag li list item-> item da lista, serve para descrever cada item dessa lista-->
+			<!--nesta estrutura ul + li, o que vai acontecer é: será apresentado ao usuário os intens da lista(li) com uma marcação(bolinha) na frente de cada item -->
+			<!--ul diz que este trecho é uma lista, enquanto li é cada item dessa lista-->
+			<!--aqui neste exemplo podemos usar ao invés da tag ul a tag -> ol (ordered list Lista com ordem(1, 2, 3…))quando usa a tag ol, aparece na frente de cada item, números ordenando os itens-->
+
+
+		  </section>
+
+		  <!--Formulário de feedback-->
+		  <section>
+		    <!--A proposta aqui é fazer um trecho na pagina, onde o usuário da uma feedback sobre sua experiencia neste quiz, antes do rodapé e depois de todas as resposta-->
+		    <!--aqui precisamos criar um campo para que o user digite seu nome-->
+		    <!-- outro campo para email-->
+		    <!-- e um campo de Comentário com uma estrutura para texto onde cabe bastante palavra, afinal de contas é um feedback.. precisar escrever mais de uma linha fazendo criticas construtivas ou não-->
+			<h2>Nos de seu feedback</h2>
+			<form>
+				<!--aqui a primeira coisa que criei foram as labels e os inputs, e fui vendo como ficava-->
+				<!--após isso criei ta tag fieldset(conjunto de campos) para que todas as informação de input e label fiquem reunidos dentro de uma só area-->
+				<!--fieldset serve para agrupar campos relacionados dentro de um formulário, O navegador desenha uma borda agrupando-os.-->
+				<!--após o fieldset acrescentei a tag legend. A tag <legend> serve para dar um título/descrição a um <fieldset>. Ela explica sobre o que é aquele grupo de campos.-->
+			  <fieldset>
+				<legend>Informações de contato</legend>
+			    <label for="name">Name:</label>
+			    <input type="text" id="name" name="name"><br>
+			    <!--o id aqui do input, entra na label para associar a label a este input-->
+			    <!--aqui a label fica na frente depois o input. lá na pergunta 1 ficou input primeiro depois label-->     
+			    <label for="email">Email:</label>
+			    <input type="email" id="email" name="email"><br><!--o type aqui é email, ao invés de text. type email é apropriado para colher o email, assim o input verifica se a informação é um email. Porque se for type text o usuário pode escrever sem @ etc.. passando informação errada-->     
+			    <label for="comentarios">Comentários:</label><br>
+			    <textarea name="comentarios" id="comentarios" rows="5" cols="60" placeholder="Digite seus comentários aqui"></textarea>
+			  </fieldset>
+
 
 			</form>
 
 		  </section>
 
-
 	    </main>
-		<footer></footer>
+
+
+		<!--Esta areá final da pagina é reservada para informações-->
+		<!--1 Informações de autoria-->
+		<!--Direitos autorais como copyright, licença, termos etc-->
+		<!--Links institucionais como: Sobre, Contato, Política de privacidade, Termos de uso-->
+		<!--Informações de contato: email, redes sociais, endereço (quando faz sentido)-->
+		<!--Data / versão-->
+		<footer>
+			<p>&copy;Quiz de programadores. Todos os direitos reservados</p><!--&copy;cria o simbolo de direito reservado-->
+			<p>Ano de criação: 2026 - Altor: William Pereira da Silva</p>
+			<!--aqui é uma palavra clicável-->
+			<P>Sobre mim - <a href="linkedin.com/in/william-p-da-silva" target="_blank"> clique aqui</a></P>
+
+			
+		</footer>
 	</body>
-
-
-
-
-
-
-
 </html>
