@@ -1,0 +1,171 @@
+/* 
+   A estilização do html poderia ser feita no próprio arquivo:
+   na linha dentro de cada tag exemplo:
+   
+       <h1 style="color: red">Quiz interativo ....</h1>
+   
+   ou em head com a tag <style> exemplo
+   
+    <style>
+    h1{ color: rad         aqui indicando que o que se afeta com que entre chaves é o h1
+         font-size:70px;
+    }
+    </style> 
+
+   Melhor que as opções anteriores, é fazer dessa forma aqui: criar um arquivo style.css para fazer isso
+   Como o trecho que será estilizado é a partir do body, a primeira parte a ser chamada aqui é ele
+*/
+
+/* 
+  o html representa uma folha no qual precisamos escrever
+  esta folha tem suas margens que é o final da folha para esquerda, direita, baixo e encima.
+  quando escrevemos algo na folha cria-se um espaço entre a palavra escrita e a margem.
+  quando escrevo na outra linha crio outro espaço entre estas palavras e as margens
+  esses espaços é chamado de padding(preenchimento interno)
+  além disso cada letra da palavra tem sua altura e largura, ou seja, seu dimensionamento.
+  o navegador ao renderizar a pagina coloca um espaço e dimensionamento padrão em: margem, padding e as dimensionamento das letras
+  isso é ruim porque perdemos o controle desses espaços e dimensionamento
+  A primeiro coisa ao estilizar o html informar o navegador para tirar esse padrão 
+  para isso usamos o seletor *{} atingindo todo o html ao mesmo tempo. Sem o qual seria preciso expecionar cada elemento do html para corrigir
+*/ 
+
+/*esse @import abaixo, será explicado na estilização de fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;/*aqui estamos dizendo ao navegador que queremos estilizar até o dimensionamento das palavra dentro do botão. Porque em botões, o navegador trás como padrão o valor content-box, que altera o tamanho da palavra dentro do botão mas não o botão. E dessa forma border-box, quando se altera a palavra dentro do botão, ajusta o tamanho do botão para que caiba a palavra dentro dele*/
+}
+
+/* body aqui abaixo é o elemento que estou afirmando ao style.css que vou estilizar
+   o head é configuração, não vai estilização
+   tudo que esta dentro do body o style.css sabe que vai ser estilizado, tirando as definições feita pelo seletor *{}
+   se quiser afetar uma parte especifica do body, preciso informar qual é essa tag
+*/
+body{
+	background-color: #f4f0ea;/*background -> fundo, muda a cor do fundo para um branco mais escuro*/
+	color: #798252;/*color aqui escrito sozinho, muda somente a cor das letras */
+
+  /*Alterei o fundo da pagina e a cor das letras acima
+    agora quero alterar a fonte das letras, ou seja, a forma das letras
+    no navegador consigo ver exemplos de fontes: google fonts. Entro no site, pesquisei o modele cabin
+    cliquei sobre ela e um botão apareceu para fazer o download e Get embed code(obter código de incorporação)
+    escolhe obter, e no quadro que apresenta se é para web, android etc seleciono para web, e não quero o link porque, link é para html, e estamos em css. Então a opção é @import
+    o google me da o endereço que o copio a partir de @importe somente, sem a tag style. tag style é html
+    colo antes do seletor *{}
+	esse @import é um importador e, como regra, todo importador fica no topo da pagina css.
+    na pagina onde dei um get(obter) tem um códio css, e copiei a segunda linha do código, essa abaixo.
+  */
+
+    font-family: "Cabin", sans-serif;
+   /*Cabin é uma familia de fonts, familia cabin tem outras fontes e configurações */
+   /*sans-serif -> sem pezinho. serif é outra categoria de fonte. O código quer dizer que:
+     se não encontrar Cabin, use Serif sem pezinho, é um plano B
+   */
+
+   font-weight: 400;
+   /*font-weight -> peso(grossura) da fonte
+     300 é fina, 400 é normal e 700 é mais grossa o traço da letra, ou seja, quanto mais grossa, mais pixels
+     no endereço @import tem essas configurações
+  */
+}
+
+/*A ideia agora e estilizar as outras partes do body*/
+/*acima é uma configuração padrão que afeta todo body. Porém o body tem header, main e footer*/
+/*as estilizações segue sempre essa ordem, primeiro pai e depois filhos*/
+
+header{
+       padding: 2rem;
+	   /*rem -> root em(em relativo a raiz). Raiz é o elemento html
+	     Por padrão o html usa font-size: 16px-> px é pixel
+		 então 1rem é 16px e 2rem é 32px
+		 nisso o header vai ficar com 32 pixels de espaço interno em todos os lados
+		 usar rem tem as vantagens de torna a pagina responsiva(adapta a diferente tamanhos de tela), acessível(torna utilizável por todas as pessoas), escalável(funciona pequeno, funciona grande sem quebrar) e consistente(funciona sempre igual, no padrão não importa o dispositivo)
+		 Usar pix não tem essas vantagens quando cresce quebra, usar em outro dispositivo quebra etc.
+		 melhorar usar unidades de medidas relativas
+	   */
+
+	   background-color: #331f19;/*altera o fundo de header*/
+	   text-align: center;/*text align(alinhe o texto)*/
+}
+
+/* estilizando o main*/
+main{
+    padding: 2rem;
+
+	/*usando flexbox - caixa flexível
+	  dentro do main temos varias section, 12 no total, e por padrão section quebra linha
+	  a proposta agora e ajustar o espaçamento de cada section, de forma padronizada
+	  cada section neste momento esta separada umas da outras dentro de main, agrupadas em blocos, mas independentes
+	  o main não controla layout, apenas “empilha” blocos, não gerencia espaçamento entre filhos
+	  para fazer com que o main assuma o controle primeiro vamos da esse poder a ele	  
+    */
+	display: flex;
+	/*display: flex -> forma de exibição flexível,
+	  Flexível significa:que pode mudar, que pode se adaptar, que não é rígido
+	  todas a section eram em blocos e o <main> não tinha controle
+	  agora com esse trecho de código, em main, é o mesmo que dizer:
+	  “Ei, <main>, agora você vai controlar o layout dos seus filhos (section)”
+  
+	  como padrão esse trecho de código joga todas as section para vertical
+	  precisamos alinhas na horizontal e para usamos esse código	
+	*/
+
+	flex-direction: column;
+	/*aqui muda a direção, das section como colunas, ou seja, uma embaixo da outra, com o porém: o main esta no controle*/
+
+	gap: 1.5rem;
+	/* gap é um termo em inglês para espaço, vão entre coisas etc
+	   e no gap passa-se o tamanho desse espaço
+    */
+}
+/*o proposito agora é dar espaçamento entre os elementos da section
+   o flexbox é aplicado no pai para controlar os filhos
+   então para dar espaçamento nos filhos da section vamos criar o mes flexbox em section
+*/
+
+section{
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+/*mudar a cor de todos os subtítulos*/
+h2{
+	color: #331f19;
+	font-size: 1.2rem;
+}
+
+
+/*estilizando input
+  no exemplo de h2 estilizamos todas eles de uma vez
+  no nosso layout temos vários input
+  os de múltipla escolha onde somente uma é possível radio,
+  onde varias escolhas é possível checkbox, de texto o text, de senha password etc
+  mas só quero atingir o input de radio e ou os outros não
+ para isso usamos o atributo do input dizendo o que vamos estilizar
+*/
+input[type="radio"], input[type="checkbox"] {
+     
+	accent-color: #ccd595;
+	/*accent significa destaque, realce, enfase então: accent-color: cor de destaque
+	  essa propriedade do css atinge somente os input de elementos de formulário, nativos do navegador
+	  do type radio, checkbox, range etc.
+
+	  vou fazer a mesma coisa com checkbox, e para não ter que construir outra lógica abaixo,
+	  vou usar essa mesma estrutura separando os type por virgula.
+	*/
+}
+
+/*alterando os outros inputs text, password, email e date
+   lembrando que esses input são os retângulos da pagina
+*/
+
+input[type="text"]{
+
+	 width: 100%;/*width é largura*/
+	 padding: 0.5rem;
+	 border: 2px solid #ccd595;/*muda a borda*/
+
+}
+
