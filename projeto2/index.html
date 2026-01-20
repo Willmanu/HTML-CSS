@@ -283,7 +283,14 @@
 			    <label for="email">Email:</label>
 			    <input type="email" id="email" name="email"><br><!--o type aqui é email, ao invés de text. type email é apropriado para colher o email, assim o input verifica se a informação é um email. Porque se for type text o usuário pode escrever sem @ etc.. passando informação errada-->     
 			    <label for="comentarios">Comentários:</label><br>
-			    <textarea name="comentarios" id="comentarios" rows="5" cols="60" placeholder="Digite seus comentários aqui"></textarea>
+			    <textarea name="comentarios" id="comentarios" rows="5" cols="60" placeholder="Digite seus comentários aqui"></textarea><br>
+				
+				<!--enviando o feedback com botão(button)-->
+				<button onclick="alert('FEEDBACK ENVIADO')">Envie o feedback</button>
+				<!--a tag button é html e cria o botão clicável de envio-->
+				<!--o atributo onclick(quando clicar) é html, é um evento do navegador e execute algo quando o usuário clicar no botão-->
+				<!--o alert(alerta) é uma função JavaScript, e mostra uma caixa de aviso no navegador, com o texto passado entre aspas simples-->
+
 			  </fieldset>
 
 
@@ -304,9 +311,18 @@
 			<p>&copy;Quiz de programadores. Todos os direitos reservados</p><!--&copy;cria o simbolo de direito reservado-->
 			<p>Ano de criação: 2026 - Altor: William Pereira da Silva</p>
 			<!--aqui é uma palavra clicável-->
-			<P>Sobre mim - <a href="linkedin.com/in/william-p-da-silva" target="_blank"> clique aqui</a></P>
+			<P>Sobre mim - <a href="https://www.linkedin.com/in/william-p-da-silva" target="_blank" rel="noopener noreferrer"> clique aqui</a></P>
 
-			
+			<!-- a tag <a> significa anchor(âncora) ela cria um link no HTML-->
+			<!--clique aqui agora por meio da tag a, vira uma frase clicável, assim a âncora permite navegar para outra pagina, site, arquivos etc..-->
+			<!--o atributo href -> Hypertext Reference(referência de hipertexto) informar para onde o link aponta, colocando o destino nele, ao clicar na palavra clicável, será levado para este endereço.-->
+			<!--o atributo target(alvo) com valor _blank(vazio/nova aba), Controlar onde o link será aberto, ou seja, abre o link em uma nova aba(alvo nova aba). Sem isso quando clica na palavra clicável, o que acontece é, fecha a pagina atual e abre a nova. Com isso abre uma nova( target ->alvo, _blank-> nova aba) -->
+			<!--o atributo rel Relationship (relação)indica a relação entre sua página e o link. Para que serve? segurança, SEO e acessibilidade-->
+			<!--o valor noopener(sem abertura) impede que a página aberta em outra aba, acesse a minha pagina original e execute scripts maliciosos-->
+
+			<!-- o noreferrer(sem referência).O que faz? não envia informações da minha página original para site externo. Assim o site externo não sabe de onde o usuário veio-->
+
+			<!--Aqui estou passando meu endereço do linkedin, mas poderia criar uma pagina sofisticada sobre mim e passar o endereço aqui-->
 		</footer>
 	</body>
 </html>
