@@ -161,11 +161,46 @@ input[type="radio"], input[type="checkbox"] {
    lembrando que esses input são os retângulos da pagina
 */
 
-input[type="text"]{
+input[type="text"], input[type="password"], input[type="date"], input[type="email"]{
 
 	 width: 100%;/*width é largura*/
 	 padding: 0.5rem;
-	 border: 2px solid #ccd595;/*muda a borda*/
+	 border: 2px solid #ccd595;
+	 /*muda a borda, tem 3 informações aqui de uma vez
+	   2px espessura da borda, px é a melhor escolha para bordas
+	   solide(sólido/contínuo) é estilo da borda uma linha reta, sem espaços e pontilhados
+	   e #ccd595 é cor 
+	 */
+	 outline: none;
+	 /*outline-> contorno, quando se clica no campo ele fica editável e um contorno azul fica aparecendo,
+	   o valor none(nenhum) tira esse contorno
+	   O contorno é importe para acessibilidade(torna-se mais acessível para mais pessoas)
+	 */
+	 
+     border-radius: 7px;
+      /*radius e raio, ou seja, da uma arrendondada na borda do campo*/
 
+	  background-color: transparent;/*altera a cor de dentro do campo*/
 }
+
+/* alterar o placeholder
+   o placeholder é um atributo do elemento input em html
+    alterar o placeholder da uma ideia de construir a linha assim:
+	input[placeholder]{} linha igual se fez para alterar os types
+	construir a lógica assim, deixa claro que estamos alterando o input e, não o placeholder. logo alterar placeholder desta forma é impossível.
+
+	para altera-lo a lógica é:  
+	input::placeholder
+     
+	isso ::placeholder no html não existe
+   no css ele é chamado de pseudo(falso/aparente) elemento do css
+   É criado pelo CSS para estilizar visualmente o placeholder
+   No html é comportamento aqui com :: e apenas estilo visual 
+*/
+input::placeholder{
+   
+	color: #ccd595;
+}
+
+
 
