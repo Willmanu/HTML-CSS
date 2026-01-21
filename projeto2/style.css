@@ -11,30 +11,47 @@
          font-size:70px;
     }
     </style> 
-
-   Melhor que as opções anteriores, é fazer dessa forma aqui: criar um arquivo style.css para fazer isso
-   Como o trecho que será estilizado é a partir do body, a primeira parte a ser chamada aqui é ele
+    
+   Se fizer dessa forma ficará muito poluída o index.html
+   Melhor que as opções anteriores, é fazer dessa forma aqui: criar um arquivo style.css e trabalhar a estilização separado do index.html.
 */
 
 /* 
   o html representa uma folha no qual precisamos escrever
-  esta folha tem suas margens que é o final da folha para esquerda, direita, baixo e encima.
+  esta folha tem suas margens que é: o final da folha para esquerda e direita, final de baixo e de cima.
   quando escrevemos algo na folha cria-se um espaço entre a palavra escrita e a margem.
   quando escrevo na outra linha crio outro espaço entre estas palavras e as margens
   esses espaços é chamado de padding(preenchimento interno)
   além disso cada letra da palavra tem sua altura e largura, ou seja, seu dimensionamento.
-  o navegador ao renderizar a pagina coloca um espaço e dimensionamento padrão em: margem, padding e as dimensionamento das letras
-  isso é ruim porque perdemos o controle desses espaços e dimensionamento
-  A primeiro coisa ao estilizar o html informar o navegador para tirar esse padrão 
-  para isso usamos o seletor *{} atingindo todo o html ao mesmo tempo. Sem o qual seria preciso expecionar cada elemento do html para corrigir
+  o navegador ao renderizar a pagina coloca um espaço e dimensionamento padrão em: margem, padding e os dimensionamento das letras
+  isso é ruim porque perdemos o controle desses espaços e dimensionamento ao longo do desenvolvimento
+  A primeiro coisa ao estilizar o html é: informar o navegador para tirar esse padrão 
+  para isso usamos o seletor *{}, assim atingindo todo o html ao mesmo tempo. Sem o qual seria preciso inspecionar cada elemento do html para corrigir
+  * -> esse asterisco é um seletor universal
+  Ele diz isso: “Aplique isso a todos os elementos da página
 */ 
 
-/*esse @import abaixo, será explicado na estilização de fontes*/
+/*esse @import abaixo, será explicado na estilização de fontes, segue*/
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+/*tirando formatação padrão do navegador*/
+/* esse asterisco * na frente de chaves {} é um seletor universal
+  Ele diz isso: “Aplique isso a todos os elementos da página
+  Tudo que está dentro das chaves são regras CSS aplicadas a pagina
+*/
 *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;/*aqui estamos dizendo ao navegador que queremos estilizar até o dimensionamento das palavra dentro do botão. Porque em botões, o navegador trás como padrão o valor content-box, que altera o tamanho da palavra dentro do botão mas não o botão. E dessa forma border-box, quando se altera a palavra dentro do botão, ajusta o tamanho do botão para que caiba a palavra dentro dele*/
+	box-sizing: border-box;
+ /*
+	box- caixa
+	sizing -> dimensionamento/ cálculo de tamanho
+	border - borda
+	aqui estamos dizendo ao navegador que: largura(width) e altura(height)  da borda(border) da caixa(box)sejam respeitados
+	
+	isso estiliza até o dimensionamento das palavra dentro do botão,visto que ele sera como uma caixa onde esta uma frase, e ao redor da frase tem os espaços.
+	Porque em botões, o navegador trás como padrão o valor content-box, que altera o tamanho da palavra dentro do botão mas não o botão. E dessa forma com border-box, quando se altera a palavra dentro do botão, ajusta o tamanho do botão para que caiba a palavra dentro dele
+ */
 }
 
 /* body aqui abaixo é o elemento que estou afirmando ao style.css que vou estilizar
@@ -43,8 +60,8 @@
    se quiser afetar uma parte especifica do body, preciso informar qual é essa tag
 */
 body{
-	background-color: #f4f0ea;/*background -> fundo, muda a cor do fundo para um branco mais escuro*/
-	color: #798252;/*color aqui escrito sozinho, muda somente a cor das letras */
+	background-color: #f4f0ea;/*background -> fundo, Define a cor da área atrás do conteúdo*/
+	color: #798252;/*color muda todo conteúdo textual */
 
   /*Alterei o fundo da pagina e a cor das letras acima
     agora quero alterar a fonte das letras, ou seja, a forma das letras
@@ -166,10 +183,11 @@ input[type="text"], input[type="password"], input[type="date"], input[type="emai
 	 width: 100%;/*width é largura*/
 	 padding: 0.5rem;
 	 border: 2px solid #ccd595;
-	 /*muda a borda, tem 3 informações aqui de uma vez
+	 /* para mudar a borda precisa: border: [largura] [estilo] [cor];
 	   2px espessura da borda, px é a melhor escolha para bordas
 	   solide(sólido/contínuo) é estilo da borda uma linha reta, sem espaços e pontilhados
 	   e #ccd595 é cor 
+	   se não for passado o conjunto, o navegador não entende e fica sem nada.
 	 */
 	 outline: none;
 	 /*outline-> contorno, quando se clica no campo ele fica editável e um contorno azul fica aparecendo,
@@ -201,6 +219,179 @@ input::placeholder{
    
 	color: #ccd595;
 }
+
+/*a proposta agora é mudar nosso menu suspenso, pergunta 7 com select*/
+
+select {
+/*Da forma que ele esta na pagina, o cursor é uma seta. Com o código baixo vira uma mão apontando */
+    cursor: pointer;
+	background-color: #ccd595;
+	color: #331f19;
+	border-radius: 5px;
+	border: none;/*tira a borda padrão deixa só cor*/
+	outline: none;/*tira a linha ao redor enquanto escolhendo*/
+}
+
+/*Figura da pergunta 8*/
+
+img{
+   width: 10rem;/*afetando largura*/
+   border-radius: 5px;/*afetando bordas*/
+}
+
+/*alterando tabela*/
+table {
+	width: 100%;/*largura padrão de 100% conforme os outros campos*/
+	border-collapse: collapse;
+	/*quando criamos o table ela tem suas bordas, e quando criamos td células esta também tem suas próprias bordas, por isso aparência duplicada 
+	collapse é unir, juntar etc. então este código junta as linhas de table a td, tirando aparência de duplicadas*/
+}
+
+/*estilizando o título da tabela o th*/
+th{
+background-color: #ccd595;
+color: #331f19;
+padding: 1rem;
+}
+
+/*estilizando as células td*/
+td{
+	color: #331f19;
+	padding: 0.6rem;
+	text-align: center;
+}
+
+/*alterando o rodapé(tfoot) da table
+   tudo que esta aqui embaixo é relacionado a tfoot
+   temos td dentro de tfoot e precisamos estiliza-lo também
+   porém acima estilizamos os td, da tabela, e o td de tfoot que esta dentro de table recebeu essa estilização. E o css vai ignorar os comando de td dentro de tfoot porque tfoot é filho de table.
+   para que o css não ignore isso, e estilize os filhos de tfoot, precisamos indicar seus filho antes das chaves {}
+*/
+tfoot td{
+	background-color: #331f19;
+	color: #f4f0ea;/*assim o css, enxerga que esse td é filho de tfoot e faz a estilização*/
+}
+
+/*estilizando a lista- verifique suas resposta*/
+/*como a lista começa com o seletor details, sera ele afrente de {}*/
+details {
+	background-color: #ccd595;
+	border-radius: 5px;
+	padding: 1rem;
+}
+
+/*Estilizando o summary*/
+summary {
+	color: #331f19;
+	margin: 1rem;/*antes desse trecho, o botão estava colado no fim esquerdo da pagina, com esse trecho entrou mais a direita*/
+	cursor: pointer;
+}
+
+/*agora são os elementos dentro da lista ol ou ul */
+/*eu usei ol neste projeto e tenho os números que indicam cada item da lista, para fora da margem*/
+ol{
+	margin-left: 1.5rem;
+	/*é assim se ajusta a margem, indicando qual lado será afetado
+	   perceba que a margem em summary, está sem orientação
+	   dessa forma será afetado todos os lados ao redor, esquerda, direita, embaixo e encima
+	   aqui estou dizendo que quero margem a esquerda e passando seu peso(distancia)
+	   o que o que será afetado é somente a esquerda
+	   Importante se não passar nada será afetado ao redor
+	   passando o lado afeta só o que foi passado
+	   e se quiser afetar esquerda e direita por exemplo?
+	   assim-> margin: 0 1.5rem; 
+	   o zero->0 representa topo e baixo, depois direita e esquerda. Loga aqui sera afetado estes últimos com o mesmo peso
+	   regra geral:
+	        Valores	       Regra
+              1	         todos os lados
+              2	         vertical / horizontal
+              3	         topo / lados / baixo
+              4	         topo → direita → baixo → esquerda
+	*/
+}
+
+/*estilizando cada li, ou seja, cada item da lista
+  para isso usa o mesmo raciocínio do td em footer
+  escreve o pai depois o filho
+*/
+ol li {
+	padding: 0.2rem;/*criando espaços entres os intens*/
+}
+
+/*estilizando feedback*/
+/*o feedback é conjunto que fica dentro de fieldset, englobando todas as labels e inputs, será fieldset a frente das chaves*/
+fieldset {
+	border: 2px solid #ccd595;
+	border-radius: 5px;
+	padding: 1rem;	
+}
+
+/*estilizando legend, ou seja o texto legenda informações de contatos de fieldset*/
+legend {
+	color: #331f19;
+	/*o texto esta colado na linha de fieldset e quero dar um espaçamento a esquerda e a direita
+	vou usar o padding, lembrando que o padding funciona igual margem, se não especificar ele cria espaços envolta do elemento */
+	padding: 0 0.5rem;
+}
+
+/*estilizando textarea*/
+textarea{
+	background-color: transparent;
+	outline: none;
+	border-radius: 5px;
+	border: 2px solid #ccd595;
+	padding: 3rem 0 0 0.7rem;
+}
+
+/*estilizando placeholder de textarea*/
+textarea::placeholder{
+    color: #3b3b37;
+	
+
+}
+
+
+/*estilizando button*/
+button{
+	background-color: #ccd595;
+	border: none;
+	padding: 0.6rem;
+	color: #331f19;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/* estilizando o footer*/
+footer{
+	background-color: #331f19;
+	padding: 2rem;
+	text-align: center;
+}
+
+/*estilizando paragrafo do footer*/
+/*os parágrafos da da pagina ja foram estilizados mais acima 
+  para quebrar essas estilização poderia fazer igual fiz no tfoot p{},
+  porém vou usar aqui uma técnica muita usada em css que é class
+  então o proximo passo é criar uma class dentro da tag p de footer
+  fica assim <P class"paragrafo-footer">texto</p> isso é como um id(identificador)
+  após isso chama ela aqui no css e estiliza os parágrafos com essa class
+
+  após criado a class criada lá aqui a chamada é precedida de um -> . ponto depois o nome da class
+*/
+ .paragrafo-footer{
+	color: #f4f0ea;
+
+ }
+
+ /*estilizando o botão: Sobre mim - clique aqui no footer*/
+ /*esse botão esta na tag <a>, e esta é unica na pagina, com isso posso usar a técnica igual do tfoot feita anteriormente, ou fazer class dentro <a class= ""> como acima*/
+ footer a{
+	text-decoration: none;/*a palavra clique aqui estava grifada embaixo dela. Com esse código sai o grifado*/
+	color: #ccd595;
+   
+ }
+
+
 
 
 
